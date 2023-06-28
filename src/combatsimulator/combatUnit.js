@@ -212,16 +212,15 @@ class CombatUnit {
             "/buff_types/physical_reflect_power"
         ).flatBoost;
         this.combatDetails.combatStats.combatExperience += this.getBuffBoost("/buff_types/wisdom").flatBoost;
-        this.combatDetails.combatStats.criticalRate += this.getBuffBoost("/buff_types/crit").flatBoost;
-        this.combatDetails.combatStats.criticalDamage += this.getBuffBoost("/buff_types/crit").flatBoost;
-
-        this.combatDetails.combatStats.combatDropRate += (1 + this.combatDetails.combatStats.combatDropRate) * this.getBuffBoost("/buff_types/combat_drop_rate").ratioBoost;
+        this.combatDetails.combatStats.criticalRate += this.getBuffBoost("/buff_types/critical_rate").flatBoost;
+        this.combatDetails.combatStats.criticalDamage += this.getBuffBoost("/buff_types/critical_damage").flatBoost;
+        this.combatDetails.combatStats.combatDropRate += this.getBuffBoost("/buff_types/combat_drop_rate").flatBoost;
         this.combatDetails.combatStats.combatRareFind += (1 + this.combatDetails.combatStats.combatRareFind) * this.getBuffBoost("/buff_types/combat_rare_find").ratioBoost;
     }
 
     addBuff(buff, currentTime) {
         buff.startTime = currentTime;
-        this.combatBuffs[buff.sourceHrid] = buff;
+        this.combatBuffs[buff.uniqueHrid] = buff;
 
         this.updateCombatDetails();
     }
@@ -231,7 +230,7 @@ class CombatUnit {
             (buff) => buff.startTime + buff.duration <= currentTime
         );
         expiredBuffs.forEach((buff) => {
-            delete this.combatBuffs[buff.sourceHrid];
+            delete this.combatBuffs[buff.uniqueHrid];
         });
 
         this.updateCombatDetails();
