@@ -167,6 +167,7 @@ class CombatUnit {
     drinks = [null, null, null];
     dropTable = [];
     rareDropTable = [];
+    abilityManaCosts = new Map();
 
     // Calculated combat stats including temporary buffs
     combatDetails = {
@@ -1908,6 +1909,7 @@ function showSimulationResult(simResult) {
     showDeaths(simResult);
     showExperienceGained(simResult);
     showConsumablesUsed(simResult);
+    showManaUsed(simResult);
     showHitpointsGained(simResult);
     showManapointsGained(simResult);
     showDamageDone(simResult);
@@ -2048,6 +2050,27 @@ function showConsumablesUsed(simResult) {
             [_combatsimulator_data_itemDetailMap_json__WEBPACK_IMPORTED_MODULE_3__[consumable].name, consumablesPerHour]
         );
         newChildren.push(consumableRow);
+    }
+
+    resultDiv.replaceChildren(...newChildren);
+}
+
+function showManaUsed(simResult) {
+    let resultDiv = document.getElementById("simulationResultManaUsed");
+    let newChildren = [];
+
+    let hoursSimulated = simResult.simulatedTime / ONE_HOUR;
+    if (!simResult.manaUsed) {
+        resultDiv.replaceChildren(...newChildren);
+        return;
+    }
+    for (let ability in simResult.manaUsed) {
+        let manaPerHour = (simResult.manaUsed[ability] / hoursSimulated).toFixed(0);
+        let manaRow = createRow(
+            ["col-md-6", "col-md-6 text-end"],
+            [ability.split("/")[2].replaceAll("_", " "), manaPerHour]
+        );
+        newChildren.push(manaRow);
     }
 
     resultDiv.replaceChildren(...newChildren);
