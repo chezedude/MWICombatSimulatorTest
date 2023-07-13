@@ -1375,8 +1375,8 @@ class CombatUtilities {
         experienceGained.target.defense = this.calculateDefenseExperience(damagePrevented);
         experienceGained.target.stamina = this.calculateStaminaExperience(damagePrevented, damageDone);
 
-        if (mitigatedReflectDamage > 0) {
-            experienceGained.target.defense += this.calculateDefenseExperience(mitigatedReflectDamage);
+        if (reflectDamageDone > 0) {
+            experienceGained.target.defense += this.calculateDefenseExperience(reflectDamageDone);
         }
 
         return { damageDone, didHit, reflectDamageDone, lifeStealHeal, experienceGained };
