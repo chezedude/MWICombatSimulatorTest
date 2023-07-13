@@ -41,6 +41,7 @@ class CombatUnit {
         smashMaxDamage: 11,
         rangedMaxDamage: 11,
         magicMaxDamage: 11,
+        taskDamage: 0,
         stabEvasionRating: 11,
         slashEvasionRating: 11,
         smashEvasionRating: 11,

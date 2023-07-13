@@ -144,6 +144,7 @@ class CombatUtilities {
         }
 
         let damageRoll = CombatUtilities.randomInt(sourceMinDamage, sourceMaxDamage);
+        damageRoll = damageRoll * (1 + source.combatDetails.combatStats.taskDamage);
         let maxPremitigatedDamage = Math.min(damageRoll, target.combatDetails.currentHitpoints);
 
         let damageDone = 0;
