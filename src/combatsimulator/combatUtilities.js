@@ -95,7 +95,7 @@ class CombatUtilities {
             case "/damage_types/physical":
                 sourceDamageMultiplier = 1 + source.combatDetails.combatStats.physicalAmplify;
                 sourceResistance = source.combatDetails.totalArmor;
-                targetResistance = target.combatDetails.totalArmor - target.combatDetails.totalArmor * source.combatDetails.combatStats.armorPenetration;
+                targetResistance = target.combatDetails.totalArmor * (1 - source.combatDetails.combatStats.armorPenetration);
                 targetReflectPower = target.combatDetails.combatStats.physicalReflectPower;
                 break;
             case "/damage_types/water":
