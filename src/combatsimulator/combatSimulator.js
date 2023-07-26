@@ -120,13 +120,6 @@ class CombatSimulator extends EventTarget {
     processCombatStartEvent(event) {
         this.players[0].reset(this.simulationTime);
 
-        this.players[0].abilities
-            .filter((ability) => ability != null)
-            .forEach((ability) => {
-                let cooldownReadyEvent = new CooldownReadyEvent(ability.lastUsed + ability.cooldownDuration);
-                this.eventQueue.addEvent(cooldownReadyEvent);
-            });
-
         let regenTickEvent = new RegenTickEvent(this.simulationTime + REGEN_TICK_INTERVAL);
         this.eventQueue.addEvent(regenTickEvent);
 
@@ -138,7 +131,7 @@ class CombatSimulator extends EventTarget {
         this.players[0].combatDetails.currentManapoints = this.players[0].combatDetails.maxManapoints;
         this.players[0].clearBuffs();
 
-        this.startAutoAttacks();
+        this.startAttacks();
     }
 
     processEnemyRespawnEvent(event) {
@@ -150,19 +143,38 @@ class CombatSimulator extends EventTarget {
 
         this.enemies.forEach((enemy) => {
             enemy.reset(this.simulationTime);
-            enemy.abilities
-                .filter((ability) => ability != null)
-                .forEach((ability) => {
-                    let cooldownReadyEvent = new CooldownReadyEvent(ability.lastUsed + ability.cooldownDuration);
-                    this.eventQueue.addEvent(cooldownReadyEvent);
-                });
+
             // console.log(enemy.hrid, "spawned");
         });
 
-        this.startAutoAttacks();
+        this.startBattle();
     }
 
-    startAutoAttacks() {
+    startBattle() {
+        let units = [this.players[0]];
+        if (this.enemies) {
+            units.push(...this.enemies);
+        }
+        for (const unit of units) {
+            if (unit.combatDetails.currentHitpoints <= 0) {
+                continue;
+            }
+            this.setupAbilitiesEvent(unit);
+        }
+    }
+
+    setupAbilitiesEvent(unit) {
+        if(!unit.isPlayer){
+            for (const ability of unit.abilities) {
+                if(ability !== null) {
+                    ability.lastUsed = this.simulationTime + Math.floor(Math.random() * ability.cooldownDuration);
+                }
+            }
+        }
+        this.addNextAttackEvent(unit);
+    }
+
+    startAttacks() {
         let units = [this.players[0]];
         if (this.enemies) {
             units.push(...this.enemies);
@@ -173,7 +185,7 @@ class CombatSimulator extends EventTarget {
                 continue;
             }
 
-            this.addNextAutoAttackEvent(unit);
+            this.addNextAttackEvent(unit);
         }
     }
 
@@ -231,7 +243,7 @@ class CombatSimulator extends EventTarget {
         }
 
         if (!this.checkEncounterEnd()) {
-            this.addNextAutoAttackEvent(event.source);
+            this.addNextAttackEvent(event.source);
         }
     }
 
@@ -240,6 +252,7 @@ class CombatSimulator extends EventTarget {
 
         if (this.enemies && !this.enemies.some((enemy) => enemy.combatDetails.currentHitpoints > 0)) {
             this.eventQueue.clearEventsOfType(AutoAttackEvent.type);
+            this.eventQueue.clearEventsOfType(CastTimeReadyEvent.type);
             let enemyRespawnEvent = new EnemyRespawnEvent(this.simulationTime + ENEMY_RESPAWN_INTERVAL);
             this.eventQueue.addEvent(enemyRespawnEvent);
             this.enemies = null;
@@ -255,6 +268,7 @@ class CombatSimulator extends EventTarget {
             !this.eventQueue.containsEventOfType(PlayerRespawnEvent.type)
         ) {
             this.eventQueue.clearEventsOfType(AutoAttackEvent.type);
+            this.eventQueue.clearEventsOfType(CastTimeReadyEvent.type);
             // 120 seconds respawn and 30 seconds traveling to battle
             let playerRespawnEvent = new PlayerRespawnEvent(this.simulationTime + PLAYER_RESPAWN_INTERVAL);
             this.eventQueue.addEvent(playerRespawnEvent);
@@ -272,6 +286,62 @@ class CombatSimulator extends EventTarget {
             source
         );
         this.eventQueue.addEvent(autoAttackEvent);
+    }
+
+    addNextAttackEvent(unit) {
+        let enemies = this.enemies;
+        let friendlies = this.players;
+        let target = CombatUtilities.getTarget(enemies);
+        for (const ability of unit.abilities) {
+            if (ability && ability.shouldTrigger(this.simulationTime, unit, target, friendlies, enemies)) {
+                let successfulAbilityCast = this.tryCastAbility(unit, ability, this.simulationTime);
+                if (successfulAbilityCast) {
+                    let castTimeReadyEvent = new CastTimeReadyEvent(
+                        this.simulationTime + ability.castDuration,
+                        unit,
+                        ability
+                    );
+                    this.eventQueue.addEvent(castTimeReadyEvent);
+                    return;
+                }
+            }
+        }
+        if(this.enemies) {
+            for (const enemy of this.enemies) {
+                if (enemy.combatDetails.currentHitpoints > 0) {
+                    this.addNextAutoAttackEvent(unit);
+                    return;
+                }
+            }
+        }
+    }
+
+    tryCastAbility(source, ability, time) {
+        //check triggers
+        if (time < ability.lastUsed + ability.cooldownDuration) {
+            return false;
+        }
+
+        if (source.combatDetails.currentHitpoints <= 0) {
+            return false;
+        }
+
+        if (source.combatDetails.currentManapoints < ability.manaCost) {
+            if (source.isPlayer) {
+                this.simResult.playerRanOutOfMana = true;
+            }
+            return false;
+        }
+
+        if (source.isSilenced) {
+            return false;
+        }
+
+        if (source.isStunned) {
+            return false;
+        }
+
+        return true;
     }
 
     processConsumableTickEvent(event) {
@@ -384,21 +454,22 @@ class CombatSimulator extends EventTarget {
 
     processStunExpirationEvent(event) {
         event.source.isStunned = false;
-        this.addNextAutoAttackEvent(event.source);
+        this.addNextAttackEvent(event.source);
     }
 
     processBlindExpirationEvent(event) {
         event.source.isBlind = false;
-        this.addNextAutoAttackEvent(event.source);
+        this.addNextAttackEvent(event.source);
     }
 
     processSilenceExpirationEvent(event) {
         event.source.isSilenced = false;
-        this.addNextAutoAttackEvent(event.source);
+        this.addNextAttackEvent(event.source);
     }
 
     processCastTimeReadyEvent(event) {
-        console.log(event);
+        this.tryUseAbility(event.source, event.ability);
+        this.addNextAttackEvent(event.source);
     }
 
     checkTriggers() {
@@ -447,15 +518,6 @@ class CombatSimulator extends EventTarget {
         for (const drink of unit.drinks) {
             if (drink && drink.shouldTrigger(this.simulationTime, unit, target, friendlies, enemies)) {
                 let result = this.tryUseConsumable(unit, drink);
-                if (result) {
-                    triggeredSomething = true;
-                }
-            }
-        }
-
-        for (const ability of unit.abilities) {
-            if (ability && ability.shouldTrigger(this.simulationTime, unit, target, friendlies, enemies)) {
-                let result = this.tryUseAbility(unit, ability);
                 if (result) {
                     triggeredSomething = true;
                 }
@@ -539,8 +601,6 @@ class CombatSimulator extends EventTarget {
         this.simResult.addExperienceGain(source, "intelligence", sourceIntelligenceExperience);
 
         ability.lastUsed = this.simulationTime;
-        let cooldownReadyEvent = new CooldownReadyEvent(this.simulationTime + ability.cooldownDuration);
-        this.eventQueue.addEvent(cooldownReadyEvent);
 
         for (const abilityEffect of ability.abilityEffects) {
             switch (abilityEffect.effectType) {
@@ -643,7 +703,7 @@ class CombatSimulator extends EventTarget {
             if (attackResult.didHit && abilityEffect.silenceChance > 0 && Math.random() < abilityEffect.silenceChance * 100 / (100 + target.combatDetails.combatStats.tenacity)) {
                 target.isSilenced = true;
                 target.silenceExpireTime = this.simulationTime + abilityEffect.silenceDuration;
-                this.eventQueue.clearMatching((event) => event.type == AutoAttackEvent.type && event.source == target);
+                this.eventQueue.clearMatching((event) => event.type == CastTimeReadyEvent.type && event.source == target);
                 let silenceExpirationEvent = new SilenceExpirationEvent(target.silenceExpireTime, target);
                 this.eventQueue.addEvent(silenceExpirationEvent);
             }

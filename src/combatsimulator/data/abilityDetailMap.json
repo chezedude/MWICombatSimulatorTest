@@ -92,47 +92,6 @@
         ],
         "sortIndex": 30
     },
-    "/abilities/blinding_shot": {
-        "hrid": "/abilities/blinding_shot",
-        "name": "Blinding Shot",
-        "description": "Takes a shot at the targeted enemy, temporarily blinding them",
-        "manaCost": 40,
-        "cooldownDuration": 20000000000,
-        "castDuration": 800000000,
-        "hasSpecialEffects": false,
-        "abilityEffects": [
-            {
-                "targetType": "enemy",
-                "effectType": "/ability_effect_types/damage",
-                "combatStyleHrid": "/combat_styles/ranged",
-                "damageType": "/damage_types/physical",
-                "baseDamageFlat": 30,
-                "baseDamageFlatLevelBonus": 0.3,
-                "baseDamageRatio": 0.8,
-                "baseDamageRatioLevelBonus": 0.008,
-                "bonusAccuracyRatio": 0,
-                "bonusAccuracyRatioLevelBonus": 0,
-                "damageOverTimeRatio": 0,
-                "damageOverTimeDuration": 0,
-                "blindChance": 0.6,
-                "blindDuration": 5000000000,
-                "silenceChance": 0,
-                "silenceDuration": 0,
-                "stunChance": 0,
-                "stunDuration": 0,
-                "buffs": null
-            }
-        ],
-        "defaultCombatTriggers": [
-            {
-                "dependencyHrid": "/combat_trigger_dependencies/targeted_enemy",
-                "conditionHrid": "/combat_trigger_conditions/current_hp",
-                "comparatorHrid": "/combat_trigger_comparators/greater_than_equal",
-                "value": 1
-            }
-        ],
-        "sortIndex": 14
-    },
     "/abilities/cleave": {
         "hrid": "/abilities/cleave",
         "name": "Cleave",
@@ -308,7 +267,7 @@
         "hrid": "/abilities/entangle",
         "name": "Entangle",
         "description": "Entangles the targeted enemy",
-        "manaCost": 25,
+        "manaCost": 30,
         "cooldownDuration": 12000000000,
         "castDuration": 2000000000,
         "hasSpecialEffects": false,
@@ -320,8 +279,8 @@
                 "damageType": "/damage_types/nature",
                 "baseDamageFlat": 10,
                 "baseDamageFlatLevelBonus": 0.1,
-                "baseDamageRatio": 0.8,
-                "baseDamageRatioLevelBonus": 0.008,
+                "baseDamageRatio": 0.9,
+                "baseDamageRatioLevelBonus": 0.009,
                 "bonusAccuracyRatio": 0,
                 "bonusAccuracyRatioLevelBonus": 0,
                 "damageOverTimeRatio": 0,
@@ -349,7 +308,7 @@
         "hrid": "/abilities/fire_storm",
         "name": "Firestorm",
         "description": "Casts a firestorm at all enemies",
-        "manaCost": 60,
+        "manaCost": 70,
         "cooldownDuration": 15000000000,
         "castDuration": 2000000000,
         "hasSpecialEffects": false,
@@ -361,8 +320,8 @@
                 "damageType": "/damage_types/fire",
                 "baseDamageFlat": 20,
                 "baseDamageFlatLevelBonus": 0.2,
-                "baseDamageRatio": 0.6,
-                "baseDamageRatioLevelBonus": 0.006,
+                "baseDamageRatio": 0.7,
+                "baseDamageRatioLevelBonus": 0.007,
                 "bonusAccuracyRatio": 0,
                 "bonusAccuracyRatioLevelBonus": 0,
                 "damageOverTimeRatio": 1,
@@ -390,7 +349,7 @@
                 "value": 1
             }
         ],
-        "sortIndex": 23
+        "sortIndex": 24
     },
     "/abilities/fireball": {
         "hrid": "/abilities/fireball",
@@ -408,8 +367,8 @@
                 "damageType": "/damage_types/fire",
                 "baseDamageFlat": 10,
                 "baseDamageFlatLevelBonus": 0.1,
-                "baseDamageRatio": 0.6,
-                "baseDamageRatioLevelBonus": 0.006,
+                "baseDamageRatio": 0.65,
+                "baseDamageRatioLevelBonus": 0.0065,
                 "bonusAccuracyRatio": 0,
                 "bonusAccuracyRatioLevelBonus": 0,
                 "damageOverTimeRatio": 0,
@@ -431,7 +390,7 @@
                 "value": 1
             }
         ],
-        "sortIndex": 21
+        "sortIndex": 22
     },
     "/abilities/flame_arrow": {
         "hrid": "/abilities/flame_arrow",
@@ -478,7 +437,7 @@
         "hrid": "/abilities/flame_blast",
         "name": "Flame Blast",
         "description": "Casts a flame blast at all enemies",
-        "manaCost": 40,
+        "manaCost": 45,
         "cooldownDuration": 15000000000,
         "castDuration": 2000000000,
         "hasSpecialEffects": false,
@@ -490,8 +449,8 @@
                 "damageType": "/damage_types/fire",
                 "baseDamageFlat": 20,
                 "baseDamageFlatLevelBonus": 0.2,
-                "baseDamageRatio": 0.8,
-                "baseDamageRatioLevelBonus": 0.008,
+                "baseDamageRatio": 0.9,
+                "baseDamageRatioLevelBonus": 0.009,
                 "bonusAccuracyRatio": 0,
                 "bonusAccuracyRatioLevelBonus": 0,
                 "damageOverTimeRatio": 0,
@@ -519,7 +478,7 @@
                 "value": 1
             }
         ],
-        "sortIndex": 22
+        "sortIndex": 23
     },
     "/abilities/frenzy": {
         "hrid": "/abilities/frenzy",
@@ -577,7 +536,7 @@
         "hrid": "/abilities/frost_surge",
         "name": "Frost Surge",
         "description": "Casts frost surge at all enemies",
-        "manaCost": 60,
+        "manaCost": 70,
         "cooldownDuration": 15000000000,
         "castDuration": 2000000000,
         "hasSpecialEffects": false,
@@ -589,8 +548,8 @@
                 "damageType": "/damage_types/water",
                 "baseDamageFlat": 30,
                 "baseDamageFlatLevelBonus": 0.3,
-                "baseDamageRatio": 0.9,
-                "baseDamageRatioLevelBonus": 0.009,
+                "baseDamageRatio": 1,
+                "baseDamageRatioLevelBonus": 0.01,
                 "bonusAccuracyRatio": 0,
                 "bonusAccuracyRatioLevelBonus": 0,
                 "damageOverTimeRatio": 0,
@@ -670,13 +629,13 @@
                 "value": 1
             }
         ],
-        "sortIndex": 25
+        "sortIndex": 26
     },
     "/abilities/ice_spear": {
         "hrid": "/abilities/ice_spear",
         "name": "Ice Spear",
         "description": "Casts an ice spear at the targeted enemy",
-        "manaCost": 40,
+        "manaCost": 45,
         "cooldownDuration": 15000000000,
         "castDuration": 2000000000,
         "hasSpecialEffects": false,
@@ -688,8 +647,8 @@
                 "damageType": "/damage_types/water",
                 "baseDamageFlat": 20,
                 "baseDamageFlatLevelBonus": 0.2,
-                "baseDamageRatio": 1.4,
-                "baseDamageRatioLevelBonus": 0.014,
+                "baseDamageRatio": 1.5,
+                "baseDamageRatioLevelBonus": 0.015,
                 "bonusAccuracyRatio": 0,
                 "bonusAccuracyRatioLevelBonus": 0,
                 "damageOverTimeRatio": 0,
@@ -804,7 +763,54 @@
                 "value": 1
             }
         ],
-        "sortIndex": 24
+        "sortIndex": 25
+    },
+    "/abilities/natures_veil": {
+        "hrid": "/abilities/natures_veil",
+        "name": "Nature's Veil",
+        "description": "Cast's a veil over all enemies, causing damage and temporary blindness",
+        "manaCost": 80,
+        "cooldownDuration": 20000000000,
+        "castDuration": 2000000000,
+        "hasSpecialEffects": false,
+        "abilityEffects": [
+            {
+                "targetType": "all enemies",
+                "effectType": "/ability_effect_types/damage",
+                "combatStyleHrid": "/combat_styles/magic",
+                "damageType": "/damage_types/nature",
+                "baseDamageFlat": 20,
+                "baseDamageFlatLevelBonus": 0.2,
+                "baseDamageRatio": 0.7,
+                "baseDamageRatioLevelBonus": 0.007,
+                "bonusAccuracyRatio": 0,
+                "bonusAccuracyRatioLevelBonus": 0,
+                "damageOverTimeRatio": 0,
+                "damageOverTimeDuration": 0,
+                "blindChance": 0.6,
+                "blindDuration": 5000000000,
+                "silenceChance": 0,
+                "silenceDuration": 0,
+                "stunChance": 0,
+                "stunDuration": 0,
+                "buffs": null
+            }
+        ],
+        "defaultCombatTriggers": [
+            {
+                "dependencyHrid": "/combat_trigger_dependencies/all_enemies",
+                "conditionHrid": "/combat_trigger_conditions/number_of_active_units",
+                "comparatorHrid": "/combat_trigger_comparators/greater_than_equal",
+                "value": 1
+            },
+            {
+                "dependencyHrid": "/combat_trigger_dependencies/all_enemies",
+                "conditionHrid": "/combat_trigger_conditions/current_hp",
+                "comparatorHrid": "/combat_trigger_comparators/greater_than_equal",
+                "value": 1
+            }
+        ],
+        "sortIndex": 21
     },
     "/abilities/pierce": {
         "hrid": "/abilities/pierce",
@@ -1080,47 +1086,6 @@
         ],
         "sortIndex": 13
     },
-    "/abilities/rejuvenate": {
-        "hrid": "/abilities/rejuvenate",
-        "name": "Rejuvenate",
-        "description": "Heals all allies",
-        "manaCost": 90,
-        "cooldownDuration": 20000000000,
-        "castDuration": 500000000,
-        "hasSpecialEffects": false,
-        "abilityEffects": [
-            {
-                "targetType": "all allies",
-                "effectType": "/ability_effect_types/heal",
-                "combatStyleHrid": "/combat_styles/magic",
-                "damageType": "",
-                "baseDamageFlat": 20,
-                "baseDamageFlatLevelBonus": 0.2,
-                "baseDamageRatio": 0.4,
-                "baseDamageRatioLevelBonus": 0.004,
-                "bonusAccuracyRatio": 0,
-                "bonusAccuracyRatioLevelBonus": 0,
-                "damageOverTimeRatio": 0,
-                "damageOverTimeDuration": 0,
-                "blindChance": 0,
-                "blindDuration": 0,
-                "silenceChance": 0,
-                "silenceDuration": 0,
-                "stunChance": 0,
-                "stunDuration": 0,
-                "buffs": null
-            }
-        ],
-        "defaultCombatTriggers": [
-            {
-                "dependencyHrid": "/combat_trigger_dependencies/all_allies",
-                "conditionHrid": "/combat_trigger_conditions/missing_hp",
-                "comparatorHrid": "/combat_trigger_comparators/greater_than_equal",
-                "value": 1
-            }
-        ],
-        "sortIndex": 26
-    },
     "/abilities/scratch": {
         "hrid": "/abilities/scratch",
         "name": "Scratch",
@@ -1166,7 +1131,7 @@
         "hrid": "/abilities/silencing_shot",
         "name": "Silencing Shot",
         "description": "Takes a shot at the targeted enemy, temporarily silencing them",
-        "manaCost": 40,
+        "manaCost": 45,
         "cooldownDuration": 20000000000,
         "castDuration": 800000000,
         "hasSpecialEffects": false,
@@ -1201,7 +1166,7 @@
                 "value": 1
             }
         ],
-        "sortIndex": 15
+        "sortIndex": 14
     },
     "/abilities/smack": {
         "hrid": "/abilities/smack",
@@ -1295,6 +1260,47 @@
             }
         ],
         "sortIndex": 33
+    },
+    "/abilities/steady_shot": {
+        "hrid": "/abilities/steady_shot",
+        "name": "Steady Shot",
+        "description": "Takes a shot at the targeted enemy with greatly enhanced accuracy",
+        "manaCost": 45,
+        "cooldownDuration": 20000000000,
+        "castDuration": 800000000,
+        "hasSpecialEffects": false,
+        "abilityEffects": [
+            {
+                "targetType": "enemy",
+                "effectType": "/ability_effect_types/damage",
+                "combatStyleHrid": "/combat_styles/ranged",
+                "damageType": "/damage_types/physical",
+                "baseDamageFlat": 30,
+                "baseDamageFlatLevelBonus": 0.3,
+                "baseDamageRatio": 0.8,
+                "baseDamageRatioLevelBonus": 0.008,
+                "bonusAccuracyRatio": 1,
+                "bonusAccuracyRatioLevelBonus": 0.01,
+                "damageOverTimeRatio": 0,
+                "damageOverTimeDuration": 0,
+                "blindChance": 0,
+                "blindDuration": 0,
+                "silenceChance": 0,
+                "silenceDuration": 0,
+                "stunChance": 0,
+                "stunDuration": 0,
+                "buffs": null
+            }
+        ],
+        "defaultCombatTriggers": [
+            {
+                "dependencyHrid": "/combat_trigger_dependencies/targeted_enemy",
+                "conditionHrid": "/combat_trigger_conditions/current_hp",
+                "comparatorHrid": "/combat_trigger_comparators/greater_than_equal",
+                "value": 1
+            }
+        ],
+        "sortIndex": 15
     },
     "/abilities/stunning_blow": {
         "hrid": "/abilities/stunning_blow",
@@ -1470,7 +1476,7 @@
         "hrid": "/abilities/toxic_pollen",
         "name": "Toxic Pollen",
         "description": "Casts toxic pollen at all enemies",
-        "manaCost": 40,
+        "manaCost": 45,
         "cooldownDuration": 18000000000,
         "castDuration": 2000000000,
         "hasSpecialEffects": false,
@@ -1482,8 +1488,8 @@
                 "damageType": "/damage_types/nature",
                 "baseDamageFlat": 20,
                 "baseDamageFlatLevelBonus": 0.2,
-                "baseDamageRatio": 0.6,
-                "baseDamageRatioLevelBonus": 0.006,
+                "baseDamageRatio": 0.7,
+                "baseDamageRatioLevelBonus": 0.007,
                 "bonusAccuracyRatio": 0,
                 "bonusAccuracyRatioLevelBonus": 0,
                 "damageOverTimeRatio": 0,
@@ -1622,8 +1628,8 @@
                 "damageType": "/damage_types/water",
                 "baseDamageFlat": 10,
                 "baseDamageFlatLevelBonus": 0.1,
-                "baseDamageRatio": 0.6,
-                "baseDamageRatioLevelBonus": 0.006,
+                "baseDamageRatio": 0.65,
+                "baseDamageRatioLevelBonus": 0.0065,
                 "bonusAccuracyRatio": 0,
                 "bonusAccuracyRatioLevelBonus": 0,
                 "damageOverTimeRatio": 0,

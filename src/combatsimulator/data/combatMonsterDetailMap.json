@@ -3,10 +3,10 @@
         "hrid": "/monsters/abyssal_imp",
         "name": "Abyssal Imp",
         "combatDetails": {
-            "currentHitpoints": 1600,
-            "maxHitpoints": 1600,
-            "currentManapoints": 2100,
-            "maxManapoints": 2100,
+            "currentHitpoints": 1800,
+            "maxHitpoints": 1800,
+            "currentManapoints": 1800,
+            "maxManapoints": 1800,
             "stabAccuracyRating": 10,
             "slashAccuracyRating": 10,
             "smashAccuracyRating": 10,
@@ -23,12 +23,12 @@
             "rangedEvasionRating": 110,
             "magicEvasionRating": 60,
             "totalArmor": 20,
-            "totalWaterResistance": 5,
-            "totalNatureResistance": 65,
-            "totalFireResistance": 65,
-            "combatLevel": 150,
-            "staminaLevel": 150,
-            "intelligenceLevel": 200,
+            "totalWaterResistance": 15,
+            "totalNatureResistance": 55,
+            "totalFireResistance": 55,
+            "combatLevel": 148,
+            "staminaLevel": 170,
+            "intelligenceLevel": 170,
             "attackLevel": 0,
             "powerLevel": 0,
             "defenseLevel": 100,
@@ -39,7 +39,7 @@
                     "/combat_styles/magic"
                 ],
                 "damageType": "/damage_types/fire",
-                "attackInterval": 5000000000,
+                "attackInterval": 7000000000,
                 "abilityHaste": 0,
                 "criticalRate": 0,
                 "criticalDamage": 0,
@@ -72,9 +72,9 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": -20,
-                "natureResistance": 40,
-                "fireResistance": 40,
+                "waterResistance": -10,
+                "natureResistance": 30,
+                "fireResistance": 30,
                 "tenacity": 0,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -90,12 +90,12 @@
         },
         "abilities": [
             {
-                "abilityHrid": "/abilities/fireball",
-                "level": 20
-            },
-            {
                 "abilityHrid": "/abilities/fire_storm",
                 "level": 1
+            },
+            {
+                "abilityHrid": "/abilities/fireball",
+                "level": 20
             }
         ],
         "dropTable": [
@@ -124,14 +124,14 @@
                 "maxCount": 4
             },
             {
-                "itemHrid": "/items/fireball",
-                "dropRate": 0.01,
+                "itemHrid": "/items/firestorm",
+                "dropRate": 0.0005,
                 "minCount": 1,
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/firestorm",
-                "dropRate": 0.0005,
+                "itemHrid": "/items/fireball",
+                "dropRate": 0.01,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -139,7 +139,7 @@
         "rareDropTable": [
             {
                 "itemHrid": "/items/large_treasure_chest",
-                "dropRate": 0.0009916666666666667,
+                "dropRate": 0.0010977777777777778,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -329,9 +329,9 @@
             "rangedEvasionRating": 45,
             "magicEvasionRating": 47,
             "totalArmor": 7,
-            "totalWaterResistance": 53.5,
+            "totalWaterResistance": 23.5,
             "totalNatureResistance": 3.5,
-            "totalFireResistance": 53.5,
+            "totalFireResistance": 23.5,
             "combatLevel": 41,
             "staminaLevel": 30,
             "intelligenceLevel": 60,
@@ -378,9 +378,9 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 50,
+                "waterResistance": 20,
                 "natureResistance": 0,
-                "fireResistance": 50,
+                "fireResistance": 20,
                 "tenacity": 0,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -471,8 +471,8 @@
             "rangedEvasionRating": 110,
             "magicEvasionRating": 60,
             "totalArmor": 20,
-            "totalWaterResistance": 30,
-            "totalNatureResistance": 30,
+            "totalWaterResistance": 20,
+            "totalNatureResistance": 20,
             "totalFireResistance": 10,
             "combatLevel": 124,
             "staminaLevel": 120,
@@ -520,8 +520,8 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 20,
-                "natureResistance": 20,
+                "waterResistance": 10,
+                "natureResistance": 10,
                 "fireResistance": 0,
                 "tenacity": 0,
                 "lifeSteal": 0,
@@ -643,9 +643,9 @@
             "rangedEvasionRating": 90,
             "magicEvasionRating": 90,
             "totalArmor": 16,
-            "totalWaterResistance": 48,
-            "totalNatureResistance": 48,
-            "totalFireResistance": 48,
+            "totalWaterResistance": 38,
+            "totalNatureResistance": 38,
+            "totalFireResistance": 38,
             "combatLevel": 88,
             "staminaLevel": 100,
             "intelligenceLevel": 100,
@@ -692,9 +692,9 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 40,
-                "natureResistance": 40,
-                "fireResistance": 40,
+                "waterResistance": 30,
+                "natureResistance": 30,
+                "fireResistance": 30,
                 "tenacity": 0,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -710,12 +710,12 @@
         },
         "abilities": [
             {
-                "abilityHrid": "/abilities/quick_shot",
-                "level": 10
-            },
-            {
                 "abilityHrid": "/abilities/rain_of_arrows",
                 "level": 1
+            },
+            {
+                "abilityHrid": "/abilities/quick_shot",
+                "level": 10
             }
         ],
         "dropTable": [
@@ -762,14 +762,14 @@
                 "maxCount": 5
             },
             {
-                "itemHrid": "/items/quick_shot",
-                "dropRate": 0.01,
+                "itemHrid": "/items/rain_of_arrows",
+                "dropRate": 0.001,
                 "minCount": 1,
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/rain_of_arrows",
-                "dropRate": 0.001,
+                "itemHrid": "/items/quick_shot",
+                "dropRate": 0.01,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -807,9 +807,9 @@
             "rangedEvasionRating": 50,
             "magicEvasionRating": 30,
             "totalArmor": 8,
-            "totalWaterResistance": 54,
+            "totalWaterResistance": 24,
             "totalNatureResistance": 4,
-            "totalFireResistance": 54,
+            "totalFireResistance": 24,
             "combatLevel": 31,
             "staminaLevel": 30,
             "intelligenceLevel": 30,
@@ -856,9 +856,9 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 50,
+                "waterResistance": 20,
                 "natureResistance": 0,
-                "fireResistance": 50,
+                "fireResistance": 20,
                 "tenacity": 0,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -949,9 +949,9 @@
             "rangedEvasionRating": 110,
             "magicEvasionRating": 60,
             "totalArmor": 20,
-            "totalWaterResistance": 125,
-            "totalNatureResistance": 80,
-            "totalFireResistance": 125,
+            "totalWaterResistance": 75,
+            "totalNatureResistance": 35,
+            "totalFireResistance": 75,
             "combatLevel": 308,
             "staminaLevel": 470,
             "intelligenceLevel": 470,
@@ -998,9 +998,9 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 90,
-                "natureResistance": 45,
-                "fireResistance": 90,
+                "waterResistance": 40,
+                "natureResistance": 0,
+                "fireResistance": 40,
                 "tenacity": 0,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -1016,20 +1016,20 @@
         },
         "abilities": [
             {
-                "abilityHrid": "/abilities/elemental_affinity",
-                "level": 20
-            },
-            {
                 "abilityHrid": "/abilities/heal",
                 "level": 20
             },
             {
-                "abilityHrid": "/abilities/ice_spear",
+                "abilityHrid": "/abilities/elemental_affinity",
                 "level": 20
             },
             {
                 "abilityHrid": "/abilities/frost_surge",
                 "level": 10
+            },
+            {
+                "abilityHrid": "/abilities/ice_spear",
+                "level": 20
             }
         ],
         "dropTable": [
@@ -1052,19 +1052,13 @@
                 "maxCount": 30
             },
             {
-                "itemHrid": "/items/elemental_affinity",
-                "dropRate": 0.005,
-                "minCount": 1,
-                "maxCount": 1
-            },
-            {
                 "itemHrid": "/items/heal",
                 "dropRate": 0.005,
                 "minCount": 1,
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/ice_spear",
+                "itemHrid": "/items/elemental_affinity",
                 "dropRate": 0.005,
                 "minCount": 1,
                 "maxCount": 1
@@ -1072,6 +1066,12 @@
             {
                 "itemHrid": "/items/frost_surge",
                 "dropRate": 0.0025,
+                "minCount": 1,
+                "maxCount": 1
+            },
+            {
+                "itemHrid": "/items/ice_spear",
+                "dropRate": 0.005,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -1109,9 +1109,9 @@
             "rangedEvasionRating": 503.99999999999994,
             "magicEvasionRating": 185,
             "totalArmor": 70,
-            "totalWaterResistance": 115,
-            "totalNatureResistance": 65,
-            "totalFireResistance": 115,
+            "totalWaterResistance": 75,
+            "totalNatureResistance": 45,
+            "totalFireResistance": 75,
             "combatLevel": 538,
             "staminaLevel": 850,
             "intelligenceLevel": 850,
@@ -1158,9 +1158,9 @@
                 "rangedEvasion": 0.4,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 80,
-                "natureResistance": 30,
-                "fireResistance": 80,
+                "waterResistance": 40,
+                "natureResistance": 10,
+                "fireResistance": 40,
                 "tenacity": 0,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -1184,12 +1184,12 @@
                 "level": 10
             },
             {
-                "abilityHrid": "/abilities/pierce",
-                "level": 30
-            },
-            {
                 "abilityHrid": "/abilities/puncture",
                 "level": 10
+            },
+            {
+                "abilityHrid": "/abilities/pierce",
+                "level": 30
             }
         ],
         "dropTable": [
@@ -1236,14 +1236,14 @@
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/pierce",
-                "dropRate": 0.01,
+                "itemHrid": "/items/puncture",
+                "dropRate": 0.005,
                 "minCount": 1,
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/puncture",
-                "dropRate": 0.005,
+                "itemHrid": "/items/pierce",
+                "dropRate": 0.01,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -1269,29 +1269,29 @@
             "slashAccuracyRating": 10,
             "smashAccuracyRating": 10,
             "rangedAccuracyRating": 10,
-            "magicAccuracyRating": 360,
+            "magicAccuracyRating": 380,
             "stabMaxDamage": 10,
             "slashMaxDamage": 10,
             "smashMaxDamage": 10,
             "rangedMaxDamage": 10,
-            "magicMaxDamage": 360,
+            "magicMaxDamage": 380,
             "stabEvasionRating": 190,
             "slashEvasionRating": 190,
             "smashEvasionRating": 190,
             "rangedEvasionRating": 190,
             "magicEvasionRating": 100,
             "totalArmor": 36,
-            "totalWaterResistance": 33,
-            "totalNatureResistance": 93,
-            "totalFireResistance": 93,
-            "combatLevel": 532,
+            "totalWaterResistance": 45,
+            "totalNatureResistance": 85,
+            "totalFireResistance": 85,
+            "combatLevel": 540,
             "staminaLevel": 890,
             "intelligenceLevel": 890,
             "attackLevel": 0,
             "powerLevel": 0,
             "defenseLevel": 180,
             "rangedLevel": 0,
-            "magicLevel": 350,
+            "magicLevel": 370,
             "combatStats": {
                 "combatStyleHrids": [
                     "/combat_styles/magic"
@@ -1330,9 +1330,9 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": -20,
-                "natureResistance": 40,
-                "fireResistance": 40,
+                "waterResistance": -10,
+                "natureResistance": 30,
+                "fireResistance": 30,
                 "tenacity": 0,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -1352,16 +1352,16 @@
                 "level": 25
             },
             {
-                "abilityHrid": "/abilities/fireball",
-                "level": 40
+                "abilityHrid": "/abilities/fire_storm",
+                "level": 10
             },
             {
                 "abilityHrid": "/abilities/flame_blast",
                 "level": 25
             },
             {
-                "abilityHrid": "/abilities/fire_storm",
-                "level": 10
+                "abilityHrid": "/abilities/fireball",
+                "level": 40
             }
         ],
         "dropTable": [
@@ -1384,8 +1384,8 @@
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/fireball",
-                "dropRate": 0.1,
+                "itemHrid": "/items/firestorm",
+                "dropRate": 0.005,
                 "minCount": 1,
                 "maxCount": 1
             },
@@ -1396,8 +1396,8 @@
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/firestorm",
-                "dropRate": 0.005,
+                "itemHrid": "/items/fireball",
+                "dropRate": 0.1,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -1405,7 +1405,7 @@
         "rareDropTable": [
             {
                 "itemHrid": "/items/large_treasure_chest",
-                "dropRate": 0.014964444444444443,
+                "dropRate": 0.015166666666666665,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -1435,9 +1435,9 @@
             "rangedEvasionRating": 210,
             "magicEvasionRating": 270,
             "totalArmor": 40,
-            "totalWaterResistance": 80,
-            "totalNatureResistance": 80,
-            "totalFireResistance": 80,
+            "totalWaterResistance": 40,
+            "totalNatureResistance": 40,
+            "totalFireResistance": 40,
             "combatLevel": 548,
             "staminaLevel": 950,
             "intelligenceLevel": 950,
@@ -1484,9 +1484,9 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 60,
-                "natureResistance": 60,
-                "fireResistance": 60,
+                "waterResistance": 20,
+                "natureResistance": 20,
+                "fireResistance": 20,
                 "tenacity": 50,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -1502,19 +1502,19 @@
         },
         "abilities": [
             {
-                "abilityHrid": "/abilities/elusiveness",
-                "level": 40
-            },
-            {
                 "abilityHrid": "/abilities/vampirism",
                 "level": 10
             },
             {
-                "abilityHrid": "/abilities/rain_of_arrows",
-                "level": 30
+                "abilityHrid": "/abilities/elusiveness",
+                "level": 40
             },
             {
-                "abilityHrid": "/abilities/blinding_shot",
+                "abilityHrid": "/abilities/steady_shot",
+                "level": 10
+            },
+            {
+                "abilityHrid": "/abilities/silencing_shot",
                 "level": 10
             }
         ],
@@ -1538,25 +1538,25 @@
                 "maxCount": 9
             },
             {
-                "itemHrid": "/items/elusiveness",
-                "dropRate": 0.015,
-                "minCount": 1,
-                "maxCount": 1
-            },
-            {
                 "itemHrid": "/items/vampirism",
                 "dropRate": 0.005,
                 "minCount": 1,
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/rain_of_arrows",
-                "dropRate": 0.01,
+                "itemHrid": "/items/elusiveness",
+                "dropRate": 0.015,
                 "minCount": 1,
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/blinding_shot",
+                "itemHrid": "/items/steady_shot",
+                "dropRate": 0.005,
+                "minCount": 1,
+                "maxCount": 1
+            },
+            {
+                "itemHrid": "/items/silencing_shot",
                 "dropRate": 0.005,
                 "minCount": 1,
                 "maxCount": 1
@@ -1595,9 +1595,9 @@
             "rangedEvasionRating": 80,
             "magicEvasionRating": 45,
             "totalArmor": 14,
-            "totalWaterResistance": 111,
-            "totalNatureResistance": 111,
-            "totalFireResistance": 111,
+            "totalWaterResistance": 51,
+            "totalNatureResistance": 51,
+            "totalFireResistance": 51,
             "combatLevel": 134,
             "staminaLevel": 140,
             "intelligenceLevel": 180,
@@ -1644,9 +1644,9 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 90,
-                "natureResistance": 90,
-                "fireResistance": 90,
+                "waterResistance": 30,
+                "natureResistance": 30,
+                "fireResistance": 30,
                 "tenacity": 0,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -2101,29 +2101,29 @@
             "slashAccuracyRating": 10,
             "smashAccuracyRating": 10,
             "rangedAccuracyRating": 10,
-            "magicAccuracyRating": 100,
+            "magicAccuracyRating": 110,
             "stabMaxDamage": 10,
             "slashMaxDamage": 10,
             "smashMaxDamage": 10,
             "rangedMaxDamage": 10,
-            "magicMaxDamage": 100,
+            "magicMaxDamage": 110,
             "stabEvasionRating": 55,
             "slashEvasionRating": 55,
             "smashEvasionRating": 55,
             "rangedEvasionRating": 55,
             "magicEvasionRating": 32,
             "totalArmor": 9,
-            "totalWaterResistance": 43.5,
-            "totalNatureResistance": 73.5,
-            "totalFireResistance": 73.5,
-            "combatLevel": 89,
+            "totalWaterResistance": 14.5,
+            "totalNatureResistance": 44.5,
+            "totalFireResistance": 44.5,
+            "combatLevel": 93,
             "staminaLevel": 90,
             "intelligenceLevel": 130,
             "attackLevel": 0,
             "powerLevel": 0,
             "defenseLevel": 45,
             "rangedLevel": 0,
-            "magicLevel": 90,
+            "magicLevel": 100,
             "combatStats": {
                 "combatStyleHrids": [
                     "/combat_styles/magic"
@@ -2162,9 +2162,9 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 30,
-                "natureResistance": 60,
-                "fireResistance": 60,
+                "waterResistance": 0,
+                "natureResistance": 30,
+                "fireResistance": 30,
                 "tenacity": 0,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -2180,12 +2180,12 @@
         },
         "abilities": [
             {
-                "abilityHrid": "/abilities/fireball",
-                "level": 15
-            },
-            {
                 "abilityHrid": "/abilities/flame_blast",
                 "level": 1
+            },
+            {
+                "abilityHrid": "/abilities/fireball",
+                "level": 15
             }
         ],
         "dropTable": [
@@ -2226,14 +2226,14 @@
                 "maxCount": 5
             },
             {
-                "itemHrid": "/items/fireball",
-                "dropRate": 0.012,
+                "itemHrid": "/items/flame_blast",
+                "dropRate": 0.0008,
                 "minCount": 1,
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/flame_blast",
-                "dropRate": 0.0008,
+                "itemHrid": "/items/fireball",
+                "dropRate": 0.012,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -2241,7 +2241,7 @@
         "rareDropTable": [
             {
                 "itemHrid": "/items/medium_treasure_chest",
-                "dropRate": 0.0008922222222222222,
+                "dropRate": 0.0009085185185185185,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -2591,12 +2591,12 @@
                 "level": 20
             },
             {
-                "abilityHrid": "/abilities/poke",
-                "level": 20
-            },
-            {
                 "abilityHrid": "/abilities/sweep",
                 "level": 10
+            },
+            {
+                "abilityHrid": "/abilities/poke",
+                "level": 20
             }
         ],
         "dropTable": [
@@ -2619,14 +2619,14 @@
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/poke",
-                "dropRate": 0.05,
+                "itemHrid": "/items/sweep",
+                "dropRate": 0.01,
                 "minCount": 1,
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/sweep",
-                "dropRate": 0.01,
+                "itemHrid": "/items/poke",
+                "dropRate": 0.05,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -2664,9 +2664,9 @@
             "rangedEvasionRating": 50,
             "magicEvasionRating": 30,
             "totalArmor": 8,
-            "totalWaterResistance": 39,
-            "totalNatureResistance": 39,
-            "totalFireResistance": 39,
+            "totalWaterResistance": 24,
+            "totalNatureResistance": 24,
+            "totalFireResistance": 24,
             "combatLevel": 56,
             "staminaLevel": 70,
             "intelligenceLevel": 70,
@@ -2713,9 +2713,9 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 30,
-                "natureResistance": 30,
-                "fireResistance": 30,
+                "waterResistance": 15,
+                "natureResistance": 15,
+                "fireResistance": 15,
                 "tenacity": 0,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -2814,14 +2814,14 @@
             "maxHitpoints": 4200,
             "currentManapoints": 4200,
             "maxManapoints": 4200,
-            "stabAccuracyRating": 210,
-            "slashAccuracyRating": 210,
-            "smashAccuracyRating": 210,
+            "stabAccuracyRating": 160,
+            "slashAccuracyRating": 160,
+            "smashAccuracyRating": 160,
             "rangedAccuracyRating": 10,
             "magicAccuracyRating": 10,
-            "stabMaxDamage": 210,
-            "slashMaxDamage": 210,
-            "smashMaxDamage": 210,
+            "stabMaxDamage": 160,
+            "slashMaxDamage": 160,
+            "smashMaxDamage": 160,
             "rangedMaxDamage": 10,
             "magicMaxDamage": 10,
             "stabEvasionRating": 100,
@@ -2833,11 +2833,11 @@
             "totalWaterResistance": 9,
             "totalNatureResistance": 9,
             "totalFireResistance": 9,
-            "combatLevel": 262,
+            "combatLevel": 242,
             "staminaLevel": 410,
             "intelligenceLevel": 410,
-            "attackLevel": 200,
-            "powerLevel": 200,
+            "attackLevel": 150,
+            "powerLevel": 150,
             "defenseLevel": 90,
             "rangedLevel": 0,
             "magicLevel": 0,
@@ -2901,16 +2901,16 @@
                 "level": 20
             },
             {
-                "abilityHrid": "/abilities/poke",
-                "level": 30
+                "abilityHrid": "/abilities/puncture",
+                "level": 1
             },
             {
                 "abilityHrid": "/abilities/pierce",
                 "level": 20
             },
             {
-                "abilityHrid": "/abilities/puncture",
-                "level": 1
+                "abilityHrid": "/abilities/poke",
+                "level": 30
             }
         ],
         "dropTable": [
@@ -2933,18 +2933,6 @@
                 "maxCount": 30
             },
             {
-                "itemHrid": "/items/poke",
-                "dropRate": 0.05,
-                "minCount": 1,
-                "maxCount": 1
-            },
-            {
-                "itemHrid": "/items/pierce",
-                "dropRate": 0.005,
-                "minCount": 1,
-                "maxCount": 1
-            },
-            {
                 "itemHrid": "/items/berserk",
                 "dropRate": 0.005,
                 "minCount": 1,
@@ -2955,12 +2943,24 @@
                 "dropRate": 0.0015,
                 "minCount": 1,
                 "maxCount": 1
+            },
+            {
+                "itemHrid": "/items/pierce",
+                "dropRate": 0.005,
+                "minCount": 1,
+                "maxCount": 1
+            },
+            {
+                "itemHrid": "/items/poke",
+                "dropRate": 0.05,
+                "minCount": 1,
+                "maxCount": 1
             }
         ],
         "rareDropTable": [
             {
                 "itemHrid": "/items/large_treasure_chest",
-                "dropRate": 0.003846111111111111,
+                "dropRate": 0.003607222222222222,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -2990,9 +2990,9 @@
             "rangedEvasionRating": 70,
             "magicEvasionRating": 62,
             "totalArmor": 12,
-            "totalWaterResistance": 56,
-            "totalNatureResistance": 56,
-            "totalFireResistance": 56,
+            "totalWaterResistance": 36,
+            "totalNatureResistance": 36,
+            "totalFireResistance": 36,
             "combatLevel": 48,
             "staminaLevel": 70,
             "intelligenceLevel": 20,
@@ -3039,9 +3039,9 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 50,
-                "natureResistance": 50,
-                "fireResistance": 50,
+                "waterResistance": 30,
+                "natureResistance": 30,
+                "fireResistance": 30,
                 "tenacity": 0,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -3672,9 +3672,9 @@
             "rangedEvasionRating": 461.99999999999994,
             "magicEvasionRating": 170,
             "totalArmor": 64,
-            "totalWaterResistance": 112,
-            "totalNatureResistance": 62,
-            "totalFireResistance": 112,
+            "totalWaterResistance": 72,
+            "totalNatureResistance": 42,
+            "totalFireResistance": 72,
             "combatLevel": 220,
             "staminaLevel": 170,
             "intelligenceLevel": 170,
@@ -3721,9 +3721,9 @@
                 "rangedEvasion": 0.4,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 80,
-                "natureResistance": 30,
-                "fireResistance": 80,
+                "waterResistance": 40,
+                "natureResistance": 10,
+                "fireResistance": 40,
                 "tenacity": 0,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -3739,12 +3739,12 @@
         },
         "abilities": [
             {
-                "abilityHrid": "/abilities/sweep",
-                "level": 20
-            },
-            {
                 "abilityHrid": "/abilities/stunning_blow",
                 "level": 10
+            },
+            {
+                "abilityHrid": "/abilities/sweep",
+                "level": 20
             }
         ],
         "dropTable": [
@@ -3797,14 +3797,14 @@
                 "maxCount": 9
             },
             {
-                "itemHrid": "/items/sweep",
-                "dropRate": 0.0025,
+                "itemHrid": "/items/stunning_blow",
+                "dropRate": 0.001,
                 "minCount": 1,
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/stunning_blow",
-                "dropRate": 0.001,
+                "itemHrid": "/items/sweep",
+                "dropRate": 0.0025,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -3842,8 +3842,8 @@
             "rangedEvasionRating": 120,
             "magicEvasionRating": 65,
             "totalArmor": 22,
-            "totalWaterResistance": 31,
-            "totalNatureResistance": 31,
+            "totalWaterResistance": 21,
+            "totalNatureResistance": 21,
             "totalFireResistance": 11,
             "combatLevel": 134,
             "staminaLevel": 130,
@@ -3891,8 +3891,8 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 20,
-                "natureResistance": 20,
+                "waterResistance": 10,
+                "natureResistance": 10,
                 "fireResistance": 0,
                 "tenacity": 0,
                 "lifeSteal": 0,
@@ -4014,8 +4014,8 @@
             "rangedEvasionRating": 90,
             "magicEvasionRating": 50,
             "totalArmor": 16,
-            "totalWaterResistance": 28,
-            "totalNatureResistance": 28,
+            "totalWaterResistance": 18,
+            "totalNatureResistance": 18,
             "totalFireResistance": 8,
             "combatLevel": 104,
             "staminaLevel": 110,
@@ -4063,8 +4063,8 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 20,
-                "natureResistance": 20,
+                "waterResistance": 10,
+                "natureResistance": 10,
                 "fireResistance": 0,
                 "tenacity": 0,
                 "lifeSteal": 0,
@@ -4156,29 +4156,29 @@
             "slashAccuracyRating": 10,
             "smashAccuracyRating": 10,
             "rangedAccuracyRating": 10,
-            "magicAccuracyRating": 90,
+            "magicAccuracyRating": 100,
             "stabMaxDamage": 10,
             "slashMaxDamage": 10,
             "smashMaxDamage": 10,
             "rangedMaxDamage": 10,
-            "magicMaxDamage": 90,
+            "magicMaxDamage": 100,
             "stabEvasionRating": 50,
             "slashEvasionRating": 50,
             "smashEvasionRating": 50,
             "rangedEvasionRating": 50,
             "magicEvasionRating": 30,
             "totalArmor": 8,
-            "totalWaterResistance": 62,
-            "totalNatureResistance": 32,
-            "totalFireResistance": 62,
-            "combatLevel": 80,
+            "totalWaterResistance": 43,
+            "totalNatureResistance": 13,
+            "totalFireResistance": 43,
+            "combatLevel": 84,
             "staminaLevel": 80,
             "intelligenceLevel": 120,
             "attackLevel": 0,
             "powerLevel": 0,
             "defenseLevel": 40,
             "rangedLevel": 0,
-            "magicLevel": 80,
+            "magicLevel": 90,
             "combatStats": {
                 "combatStyleHrids": [
                     "/combat_styles/magic"
@@ -4217,9 +4217,9 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 50,
-                "natureResistance": 20,
-                "fireResistance": 50,
+                "waterResistance": 30,
+                "natureResistance": 0,
+                "fireResistance": 30,
                 "tenacity": 0,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -4235,12 +4235,12 @@
         },
         "abilities": [
             {
-                "abilityHrid": "/abilities/water_strike",
-                "level": 15
-            },
-            {
                 "abilityHrid": "/abilities/ice_spear",
                 "level": 1
+            },
+            {
+                "abilityHrid": "/abilities/water_strike",
+                "level": 15
             }
         ],
         "dropTable": [
@@ -4281,14 +4281,14 @@
                 "maxCount": 4
             },
             {
-                "itemHrid": "/items/water_strike",
-                "dropRate": 0.012,
+                "itemHrid": "/items/ice_spear",
+                "dropRate": 0.0008,
                 "minCount": 1,
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/ice_spear",
-                "dropRate": 0.0008,
+                "itemHrid": "/items/water_strike",
+                "dropRate": 0.012,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -4296,7 +4296,7 @@
         "rareDropTable": [
             {
                 "itemHrid": "/items/medium_treasure_chest",
-                "dropRate": 0.0007777777777777777,
+                "dropRate": 0.0007925925925925927,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -4326,9 +4326,9 @@
             "rangedEvasionRating": 190,
             "magicEvasionRating": 100,
             "totalArmor": 36,
-            "totalWaterResistance": 23,
-            "totalNatureResistance": 83,
-            "totalFireResistance": 83,
+            "totalWaterResistance": 33,
+            "totalNatureResistance": 73,
+            "totalFireResistance": 73,
             "combatLevel": 246,
             "staminaLevel": 250,
             "intelligenceLevel": 300,
@@ -4375,9 +4375,9 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": -20,
-                "natureResistance": 40,
-                "fireResistance": 40,
+                "waterResistance": -10,
+                "natureResistance": 30,
+                "fireResistance": 30,
                 "tenacity": 0,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -4393,12 +4393,12 @@
         },
         "abilities": [
             {
-                "abilityHrid": "/abilities/flame_blast",
-                "level": 15
-            },
-            {
                 "abilityHrid": "/abilities/fire_storm",
                 "level": 10
+            },
+            {
+                "abilityHrid": "/abilities/flame_blast",
+                "level": 15
             }
         ],
         "dropTable": [
@@ -4427,14 +4427,14 @@
                 "maxCount": 9
             },
             {
-                "itemHrid": "/items/flame_blast",
-                "dropRate": 0.0015,
+                "itemHrid": "/items/firestorm",
+                "dropRate": 0.0008,
                 "minCount": 1,
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/firestorm",
-                "dropRate": 0.0008,
+                "itemHrid": "/items/flame_blast",
+                "dropRate": 0.0015,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -4472,8 +4472,8 @@
             "rangedEvasionRating": 30,
             "magicEvasionRating": 20,
             "totalArmor": 4,
-            "totalWaterResistance": 55,
-            "totalNatureResistance": 55,
+            "totalWaterResistance": 25,
+            "totalNatureResistance": 25,
             "totalFireResistance": 5,
             "combatLevel": 32,
             "staminaLevel": 40,
@@ -4521,8 +4521,8 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 50,
-                "natureResistance": 50,
+                "waterResistance": 20,
+                "natureResistance": 20,
                 "fireResistance": 0,
                 "tenacity": 0,
                 "lifeSteal": 0,
@@ -4539,12 +4539,12 @@
         },
         "abilities": [
             {
-                "abilityHrid": "/abilities/entangle",
-                "level": 10
-            },
-            {
                 "abilityHrid": "/abilities/heal",
                 "level": 1
+            },
+            {
+                "abilityHrid": "/abilities/entangle",
+                "level": 10
             }
         ],
         "dropTable": [
@@ -4579,14 +4579,14 @@
                 "maxCount": 3
             },
             {
-                "itemHrid": "/items/entangle",
-                "dropRate": 0.01,
+                "itemHrid": "/items/heal",
+                "dropRate": 0.0008,
                 "minCount": 1,
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/heal",
-                "dropRate": 0.0008,
+                "itemHrid": "/items/entangle",
+                "dropRate": 0.01,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -4612,29 +4612,29 @@
             "slashAccuracyRating": 10,
             "smashAccuracyRating": 10,
             "rangedAccuracyRating": 10,
-            "magicAccuracyRating": 160,
+            "magicAccuracyRating": 170,
             "stabMaxDamage": 10,
             "slashMaxDamage": 10,
             "smashMaxDamage": 10,
             "rangedMaxDamage": 10,
-            "magicMaxDamage": 160,
+            "magicMaxDamage": 170,
             "stabEvasionRating": 90,
             "slashEvasionRating": 90,
             "smashEvasionRating": 90,
             "rangedEvasionRating": 90,
             "magicEvasionRating": 50,
             "totalArmor": 36,
-            "totalWaterResistance": 73,
-            "totalNatureResistance": 73,
-            "totalFireResistance": 23,
-            "combatLevel": 256,
+            "totalWaterResistance": 44,
+            "totalNatureResistance": 44,
+            "totalFireResistance": 24,
+            "combatLevel": 260,
             "staminaLevel": 450,
             "intelligenceLevel": 450,
             "attackLevel": 0,
             "powerLevel": 0,
             "defenseLevel": 80,
             "rangedLevel": 0,
-            "magicLevel": 150,
+            "magicLevel": 160,
             "combatStats": {
                 "combatStyleHrids": [
                     "/combat_styles/magic"
@@ -4673,8 +4673,8 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 20,
-                "waterResistance": 50,
-                "natureResistance": 50,
+                "waterResistance": 20,
+                "natureResistance": 20,
                 "fireResistance": 0,
                 "tenacity": 40,
                 "lifeSteal": 0,
@@ -4695,16 +4695,16 @@
                 "level": 30
             },
             {
-                "abilityHrid": "/abilities/entangle",
-                "level": 30
+                "abilityHrid": "/abilities/natures_veil",
+                "level": 1
             },
             {
                 "abilityHrid": "/abilities/toxic_pollen",
                 "level": 15
             },
             {
-                "abilityHrid": "/abilities/rejuvenate",
-                "level": 1
+                "abilityHrid": "/abilities/entangle",
+                "level": 30
             }
         ],
         "dropTable": [
@@ -4733,8 +4733,8 @@
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/entangle",
-                "dropRate": 0.05,
+                "itemHrid": "/items/natures_veil",
+                "dropRate": 0.0025,
                 "minCount": 1,
                 "maxCount": 1
             },
@@ -4745,8 +4745,8 @@
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/rejuvenate",
-                "dropRate": 0.0025,
+                "itemHrid": "/items/entangle",
+                "dropRate": 0.05,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -4754,7 +4754,7 @@
         "rareDropTable": [
             {
                 "itemHrid": "/items/large_treasure_chest",
-                "dropRate": 0.004125555555555555,
+                "dropRate": 0.004177777777777778,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -4784,9 +4784,9 @@
             "rangedEvasionRating": 406,
             "magicEvasionRating": 150,
             "totalArmor": 56,
-            "totalWaterResistance": 108,
-            "totalNatureResistance": 58,
-            "totalFireResistance": 108,
+            "totalWaterResistance": 68,
+            "totalNatureResistance": 38,
+            "totalFireResistance": 68,
             "combatLevel": 180,
             "staminaLevel": 130,
             "intelligenceLevel": 130,
@@ -4833,9 +4833,9 @@
                 "rangedEvasion": 0.4,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 80,
-                "natureResistance": 30,
-                "fireResistance": 80,
+                "waterResistance": 40,
+                "natureResistance": 10,
+                "fireResistance": 40,
                 "tenacity": 0,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -4944,9 +4944,9 @@
             "rangedEvasionRating": 75,
             "magicEvasionRating": 107,
             "totalArmor": 13,
-            "totalWaterResistance": 56.5,
+            "totalWaterResistance": 26.5,
             "totalNatureResistance": 6.5,
-            "totalFireResistance": 56.5,
+            "totalFireResistance": 26.5,
             "combatLevel": 189,
             "staminaLevel": 310,
             "intelligenceLevel": 310,
@@ -4993,9 +4993,9 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 50,
+                "waterResistance": 20,
                 "natureResistance": 0,
-                "fireResistance": 50,
+                "fireResistance": 20,
                 "tenacity": 30,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -5011,16 +5011,16 @@
         },
         "abilities": [
             {
+                "abilityHrid": "/abilities/silencing_shot",
+                "level": 1
+            },
+            {
                 "abilityHrid": "/abilities/aqua_arrow",
                 "level": 30
             },
             {
                 "abilityHrid": "/abilities/rain_of_arrows",
                 "level": 15
-            },
-            {
-                "abilityHrid": "/abilities/silencing_shot",
-                "level": 1
             }
         ],
         "dropTable": [
@@ -5043,6 +5043,12 @@
                 "maxCount": 30
             },
             {
+                "itemHrid": "/items/silencing_shot",
+                "dropRate": 0.0025,
+                "minCount": 1,
+                "maxCount": 1
+            },
+            {
                 "itemHrid": "/items/aqua_arrow",
                 "dropRate": 0.005,
                 "minCount": 1,
@@ -5051,12 +5057,6 @@
             {
                 "itemHrid": "/items/rain_of_arrows",
                 "dropRate": 0.005,
-                "minCount": 1,
-                "maxCount": 1
-            },
-            {
-                "itemHrid": "/items/silencing_shot",
-                "dropRate": 0.0025,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -5094,8 +5094,8 @@
             "rangedEvasionRating": 40,
             "magicEvasionRating": 25,
             "totalArmor": 6,
-            "totalWaterResistance": 57,
-            "totalNatureResistance": 57,
+            "totalWaterResistance": 27,
+            "totalNatureResistance": 27,
             "totalFireResistance": 7,
             "combatLevel": 46,
             "staminaLevel": 60,
@@ -5143,8 +5143,8 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 50,
-                "natureResistance": 50,
+                "waterResistance": 20,
+                "natureResistance": 20,
                 "fireResistance": 0,
                 "tenacity": 0,
                 "lifeSteal": 0,
@@ -5242,9 +5242,9 @@
             "rangedEvasionRating": 55,
             "magicEvasionRating": 32,
             "totalArmor": 9,
-            "totalWaterResistance": 54.5,
+            "totalWaterResistance": 24.5,
             "totalNatureResistance": 4.5,
-            "totalFireResistance": 54.5,
+            "totalFireResistance": 24.5,
             "combatLevel": 42,
             "staminaLevel": 38,
             "intelligenceLevel": 38,
@@ -5291,9 +5291,9 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 50,
+                "waterResistance": 20,
                 "natureResistance": 0,
-                "fireResistance": 50,
+                "fireResistance": 20,
                 "tenacity": 0,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -5402,29 +5402,29 @@
             "slashAccuracyRating": 10,
             "smashAccuracyRating": 10,
             "rangedAccuracyRating": 10,
-            "magicAccuracyRating": 50,
+            "magicAccuracyRating": 60,
             "stabMaxDamage": 10,
             "slashMaxDamage": 10,
             "smashMaxDamage": 10,
             "rangedMaxDamage": 10,
-            "magicMaxDamage": 50,
+            "magicMaxDamage": 60,
             "stabEvasionRating": 30,
             "slashEvasionRating": 30,
             "smashEvasionRating": 30,
             "rangedEvasionRating": 30,
             "magicEvasionRating": 20,
             "totalArmor": 4,
-            "totalWaterResistance": 36,
-            "totalNatureResistance": 36,
-            "totalFireResistance": 36,
-            "combatLevel": 40,
+            "totalWaterResistance": 22,
+            "totalNatureResistance": 22,
+            "totalFireResistance": 22,
+            "combatLevel": 44,
             "staminaLevel": 40,
             "intelligenceLevel": 60,
             "attackLevel": 0,
             "powerLevel": 0,
             "defenseLevel": 20,
             "rangedLevel": 0,
-            "magicLevel": 40,
+            "magicLevel": 50,
             "combatStats": {
                 "combatStyleHrids": [
                     "/combat_styles/magic"
@@ -5448,7 +5448,7 @@
                 "physicalAmplify": 0,
                 "waterAmplify": 0.1,
                 "natureAmplify": 0,
-                "fireAmplify": 0.1,
+                "fireAmplify": 0,
                 "healingAmplify": 0,
                 "armorPenetration": 0,
                 "waterPenetration": 0,
@@ -5463,9 +5463,9 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 30,
-                "natureResistance": 30,
-                "fireResistance": 30,
+                "waterResistance": 15,
+                "natureResistance": 15,
+                "fireResistance": 15,
                 "tenacity": 0,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -5482,10 +5482,6 @@
         "abilities": [
             {
                 "abilityHrid": "/abilities/water_strike",
-                "level": 10
-            },
-            {
-                "abilityHrid": "/abilities/fireball",
                 "level": 10
             }
         ],
@@ -5525,18 +5521,12 @@
                 "dropRate": 0.008,
                 "minCount": 1,
                 "maxCount": 1
-            },
-            {
-                "itemHrid": "/items/fireball",
-                "dropRate": 0.008,
-                "minCount": 1,
-                "maxCount": 1
             }
         ],
         "rareDropTable": [
             {
                 "itemHrid": "/items/small_treasure_chest",
-                "dropRate": 0.0007999999999999999,
+                "dropRate": 0.0008133333333333333,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -5566,8 +5556,8 @@
             "rangedEvasionRating": 140,
             "magicEvasionRating": 75,
             "totalArmor": 38,
-            "totalWaterResistance": 33,
-            "totalNatureResistance": 33,
+            "totalWaterResistance": 23,
+            "totalNatureResistance": 23,
             "totalFireResistance": 13,
             "combatLevel": 138,
             "staminaLevel": 150,
@@ -5615,8 +5605,8 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 12,
-                "waterResistance": 20,
-                "natureResistance": 20,
+                "waterResistance": 10,
+                "natureResistance": 10,
                 "fireResistance": 0,
                 "tenacity": 0,
                 "lifeSteal": 0,
@@ -5756,8 +5746,8 @@
             "rangedEvasionRating": 140,
             "magicEvasionRating": 75,
             "totalArmor": 26,
-            "totalWaterResistance": 33,
-            "totalNatureResistance": 33,
+            "totalWaterResistance": 23,
+            "totalNatureResistance": 23,
             "totalFireResistance": 13,
             "combatLevel": 146,
             "staminaLevel": 140,
@@ -5805,8 +5795,8 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 20,
-                "natureResistance": 20,
+                "waterResistance": 10,
+                "natureResistance": 10,
                 "fireResistance": 0,
                 "tenacity": 0,
                 "lifeSteal": 0,
@@ -6218,8 +6208,8 @@
             "rangedEvasionRating": 170,
             "magicEvasionRating": 90,
             "totalArmor": 32,
-            "totalWaterResistance": 36,
-            "totalNatureResistance": 36,
+            "totalWaterResistance": 26,
+            "totalNatureResistance": 26,
             "totalFireResistance": 16,
             "combatLevel": 410,
             "staminaLevel": 700,
@@ -6267,8 +6257,8 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 20,
-                "natureResistance": 20,
+                "waterResistance": 10,
+                "natureResistance": 10,
                 "fireResistance": 0,
                 "tenacity": 0,
                 "lifeSteal": 0,
@@ -6293,12 +6283,12 @@
                 "level": 20
             },
             {
-                "abilityHrid": "/abilities/cleave",
-                "level": 20
-            },
-            {
                 "abilityHrid": "/abilities/maim",
                 "level": 10
+            },
+            {
+                "abilityHrid": "/abilities/cleave",
+                "level": 20
             }
         ],
         "dropTable": [
@@ -6333,14 +6323,14 @@
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/cleave",
-                "dropRate": 0.005,
+                "itemHrid": "/items/maim",
+                "dropRate": 0.0025,
                 "minCount": 1,
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/maim",
-                "dropRate": 0.0025,
+                "itemHrid": "/items/cleave",
+                "dropRate": 0.005,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -6378,9 +6368,9 @@
             "rangedEvasionRating": 38,
             "magicEvasionRating": 24,
             "totalArmor": 5.6000000000000005,
-            "totalWaterResistance": 52.8,
+            "totalWaterResistance": 22.8,
             "totalNatureResistance": 2.8000000000000003,
-            "totalFireResistance": 52.8,
+            "totalFireResistance": 22.8,
             "combatLevel": 24,
             "staminaLevel": 25,
             "intelligenceLevel": 25,
@@ -6427,9 +6417,9 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 50,
+                "waterResistance": 20,
                 "natureResistance": 0,
-                "fireResistance": 50,
+                "fireResistance": 20,
                 "tenacity": 0,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -6735,11 +6725,11 @@
         },
         "abilities": [
             {
-                "abilityHrid": "/abilities/water_strike",
+                "abilityHrid": "/abilities/minor_heal",
                 "level": 1
             },
             {
-                "abilityHrid": "/abilities/minor_heal",
+                "abilityHrid": "/abilities/water_strike",
                 "level": 1
             }
         ],
@@ -6763,13 +6753,13 @@
                 "maxCount": 4
             },
             {
-                "itemHrid": "/items/water_strike",
+                "itemHrid": "/items/minor_heal",
                 "dropRate": 0.005,
                 "minCount": 1,
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/minor_heal",
+                "itemHrid": "/items/water_strike",
                 "dropRate": 0.005,
                 "minCount": 1,
                 "maxCount": 1
@@ -6930,36 +6920,36 @@
         "hrid": "/monsters/soul_hunter",
         "name": "Soul Hunter",
         "combatDetails": {
-            "currentHitpoints": 2100,
-            "maxHitpoints": 2100,
-            "currentManapoints": 2100,
-            "maxManapoints": 2100,
+            "currentHitpoints": 2300,
+            "maxHitpoints": 2300,
+            "currentManapoints": 2300,
+            "maxManapoints": 2300,
             "stabAccuracyRating": 10,
             "slashAccuracyRating": 10,
             "smashAccuracyRating": 10,
-            "rangedAccuracyRating": 210,
+            "rangedAccuracyRating": 230,
             "magicAccuracyRating": 10,
             "stabMaxDamage": 10,
             "slashMaxDamage": 10,
             "smashMaxDamage": 10,
-            "rangedMaxDamage": 210,
+            "rangedMaxDamage": 230,
             "magicMaxDamage": 10,
             "stabEvasionRating": 160,
             "slashEvasionRating": 160,
             "smashEvasionRating": 160,
             "rangedEvasionRating": 160,
-            "magicEvasionRating": 185,
+            "magicEvasionRating": 195,
             "totalArmor": 30,
-            "totalWaterResistance": 65,
-            "totalNatureResistance": 65,
-            "totalFireResistance": 65,
-            "combatLevel": 190,
-            "staminaLevel": 200,
-            "intelligenceLevel": 200,
+            "totalWaterResistance": 45,
+            "totalNatureResistance": 45,
+            "totalFireResistance": 45,
+            "combatLevel": 206,
+            "staminaLevel": 220,
+            "intelligenceLevel": 220,
             "attackLevel": 0,
             "powerLevel": 0,
             "defenseLevel": 150,
-            "rangedLevel": 200,
+            "rangedLevel": 220,
             "magicLevel": 0,
             "combatStats": {
                 "combatStyleHrids": [
@@ -6999,9 +6989,9 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 50,
-                "natureResistance": 50,
-                "fireResistance": 50,
+                "waterResistance": 30,
+                "natureResistance": 30,
+                "fireResistance": 30,
                 "tenacity": 0,
                 "lifeSteal": 0,
                 "manaLeech": 0.02,
@@ -7017,12 +7007,12 @@
         },
         "abilities": [
             {
-                "abilityHrid": "/abilities/quick_shot",
-                "level": 20
-            },
-            {
                 "abilityHrid": "/abilities/silencing_shot",
                 "level": 1
+            },
+            {
+                "abilityHrid": "/abilities/rain_of_arrows",
+                "level": 10
             }
         ],
         "dropTable": [
@@ -7057,14 +7047,14 @@
                 "maxCount": 6
             },
             {
-                "itemHrid": "/items/quick_shot",
-                "dropRate": 0.02,
+                "itemHrid": "/items/silencing_shot",
+                "dropRate": 0.0008,
                 "minCount": 1,
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/silencing_shot",
-                "dropRate": 0.0008,
+                "itemHrid": "/items/rain_of_arrows",
+                "dropRate": 0.0015,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -7072,7 +7062,7 @@
         "rareDropTable": [
             {
                 "itemHrid": "/items/large_treasure_chest",
-                "dropRate": 0.0015277777777777776,
+                "dropRate": 0.0017733333333333334,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -7102,9 +7092,9 @@
             "rangedEvasionRating": 364,
             "magicEvasionRating": 135,
             "totalArmor": 50,
-            "totalWaterResistance": 105,
-            "totalNatureResistance": 55,
-            "totalFireResistance": 105,
+            "totalWaterResistance": 65,
+            "totalNatureResistance": 35,
+            "totalFireResistance": 65,
             "combatLevel": 184,
             "staminaLevel": 150,
             "intelligenceLevel": 150,
@@ -7151,9 +7141,9 @@
                 "rangedEvasion": 0.4,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 80,
-                "natureResistance": 30,
-                "fireResistance": 80,
+                "waterResistance": 40,
+                "natureResistance": 10,
+                "fireResistance": 40,
                 "tenacity": 0,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -7173,8 +7163,8 @@
                 "level": 1
             },
             {
-                "abilityHrid": "/abilities/puncture",
-                "level": 1
+                "abilityHrid": "/abilities/toughness",
+                "level": 20
             }
         ],
         "dropTable": [
@@ -7227,14 +7217,14 @@
                 "maxCount": 6
             },
             {
-                "itemHrid": "/items/toughness",
-                "dropRate": 0.0025,
+                "itemHrid": "/items/spike_shell",
+                "dropRate": 0.001,
                 "minCount": 1,
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/puncture",
-                "dropRate": 0.001,
+                "itemHrid": "/items/toughness",
+                "dropRate": 0.0025,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -7509,16 +7499,16 @@
                 "level": 30
             },
             {
+                "abilityHrid": "/abilities/steady_shot",
+                "level": 1
+            },
+            {
                 "abilityHrid": "/abilities/aqua_arrow",
                 "level": 20
             },
             {
                 "abilityHrid": "/abilities/flame_arrow",
                 "level": 20
-            },
-            {
-                "abilityHrid": "/abilities/blinding_shot",
-                "level": 1
             }
         ],
         "dropTable": [
@@ -7541,6 +7531,12 @@
                 "maxCount": 1
             },
             {
+                "itemHrid": "/items/steady_shot",
+                "dropRate": 0.0016,
+                "minCount": 1,
+                "maxCount": 1
+            },
+            {
                 "itemHrid": "/items/aqua_arrow",
                 "dropRate": 0.005,
                 "minCount": 1,
@@ -7549,12 +7545,6 @@
             {
                 "itemHrid": "/items/flame_arrow",
                 "dropRate": 0.005,
-                "minCount": 1,
-                "maxCount": 1
-            },
-            {
-                "itemHrid": "/items/blinding_shot",
-                "dropRate": 0.0016,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -7592,8 +7582,8 @@
             "rangedEvasionRating": 70,
             "magicEvasionRating": 40,
             "totalArmor": 22,
-            "totalWaterResistance": 62,
-            "totalNatureResistance": 62,
+            "totalWaterResistance": 32,
+            "totalNatureResistance": 32,
             "totalFireResistance": 12,
             "combatLevel": 68,
             "staminaLevel": 80,
@@ -7641,8 +7631,8 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 10,
-                "waterResistance": 50,
-                "natureResistance": 50,
+                "waterResistance": 20,
+                "natureResistance": 20,
                 "fireResistance": 0,
                 "tenacity": 0,
                 "lifeSteal": 0,
@@ -7659,12 +7649,12 @@
         },
         "abilities": [
             {
-                "abilityHrid": "/abilities/entangle",
-                "level": 10
-            },
-            {
                 "abilityHrid": "/abilities/toxic_pollen",
                 "level": 5
+            },
+            {
+                "abilityHrid": "/abilities/entangle",
+                "level": 10
             }
         ],
         "dropTable": [
@@ -7735,14 +7725,14 @@
                 "maxCount": 6
             },
             {
-                "itemHrid": "/items/entangle",
-                "dropRate": 0.01,
+                "itemHrid": "/items/toxic_pollen",
+                "dropRate": 0.001,
                 "minCount": 1,
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/toxic_pollen",
-                "dropRate": 0.001,
+                "itemHrid": "/items/entangle",
+                "dropRate": 0.01,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -7780,9 +7770,9 @@
             "rangedEvasionRating": 65,
             "magicEvasionRating": 37,
             "totalArmor": 11,
-            "totalWaterResistance": 55.5,
+            "totalWaterResistance": 25.5,
             "totalNatureResistance": 5.5,
-            "totalFireResistance": 55.5,
+            "totalFireResistance": 25.5,
             "combatLevel": 52,
             "staminaLevel": 60,
             "intelligenceLevel": 50,
@@ -7829,9 +7819,9 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 50,
+                "waterResistance": 20,
                 "natureResistance": 0,
-                "fireResistance": 50,
+                "fireResistance": 20,
                 "tenacity": 0,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -7946,9 +7936,9 @@
             "rangedEvasionRating": 180,
             "magicEvasionRating": 95,
             "totalArmor": 34,
-            "totalWaterResistance": 77,
-            "totalNatureResistance": 77,
-            "totalFireResistance": 77,
+            "totalWaterResistance": 37,
+            "totalNatureResistance": 37,
+            "totalFireResistance": 37,
             "combatLevel": 208,
             "staminaLevel": 210,
             "intelligenceLevel": 210,
@@ -7995,9 +7985,9 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 60,
-                "natureResistance": 60,
-                "fireResistance": 60,
+                "waterResistance": 20,
+                "natureResistance": 20,
+                "fireResistance": 20,
                 "tenacity": 0,
                 "lifeSteal": 0.02,
                 "manaLeech": 0,
@@ -8014,6 +8004,10 @@
         "abilities": [
             {
                 "abilityHrid": "/abilities/vampirism",
+                "level": 1
+            },
+            {
+                "abilityHrid": "/abilities/puncture",
                 "level": 1
             }
         ],
@@ -8062,6 +8056,12 @@
             },
             {
                 "itemHrid": "/items/vampirism",
+                "dropRate": 0.0008,
+                "minCount": 1,
+                "maxCount": 1
+            },
+            {
+                "itemHrid": "/items/puncture",
                 "dropRate": 0.0008,
                 "minCount": 1,
                 "maxCount": 1
@@ -8248,9 +8248,9 @@
             "rangedEvasionRating": 170,
             "magicEvasionRating": 90,
             "totalArmor": 32,
-            "totalWaterResistance": 76,
-            "totalNatureResistance": 76,
-            "totalFireResistance": 76,
+            "totalWaterResistance": 36,
+            "totalNatureResistance": 36,
+            "totalFireResistance": 36,
             "combatLevel": 220,
             "staminaLevel": 240,
             "intelligenceLevel": 240,
@@ -8297,9 +8297,9 @@
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
                 "armor": 0,
-                "waterResistance": 60,
-                "natureResistance": 60,
-                "fireResistance": 60,
+                "waterResistance": 20,
+                "natureResistance": 20,
+                "fireResistance": 20,
                 "tenacity": 0,
                 "lifeSteal": 0,
                 "manaLeech": 0,

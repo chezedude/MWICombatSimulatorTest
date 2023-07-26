@@ -3,9 +3,10 @@ import CombatEvent from "./combatEvent";
 class CastTimeReadyEvent extends CombatEvent {
     static type = "castTimeReady";
 
-    constructor(time, coolDownDuration) {
+    constructor(time, source, ability) {
         super(CastTimeReadyEvent.type, time);
-        this.cooldownduration = coolDownDuration;
+        this.source = source;
+        this.ability = ability;
     }
 }
 
