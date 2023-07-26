@@ -1049,7 +1049,7 @@ class CombatUnit {
             (1 + this.combatDetails.combatStats.magicDamage) *
             (1 + damageRatioBoost);
         this.combatDetails.magicEvasionRating =
-            (10 + this.combatDetails.defenseLevel) * (1 + this.combatDetails.combatStats.magicEvasion);
+            (10 + (this.combatDetails.defenseLevel + this.combatDetails.rangedLevel) / 2) * (1 + this.combatDetails.combatStats.magicEvasion);
         this.combatDetails.rangedEvasionRating += this.combatDetails.rangedEvasionRating * this.getBuffBoost("/buff_types/evasion").ratioBoost;
         this.combatDetails.magicEvasionRating += this.combatDetails.magicEvasionRating * this.getBuffBoost("/buff_types/evasion").ratioBoost;
         this.combatDetails.slashEvasionRating += this.combatDetails.slashEvasionRating * this.getBuffBoost("/buff_types/evasion").ratioBoost;
@@ -1370,16 +1370,13 @@ class CombatUtilities {
                 throw new Error("Unknown damage type: " + damageType);
         }
 
-        let hitChance = 1;
         let critChance = 0;
         let bonusCritChance = source.combatDetails.combatStats.criticalRate;
         let bonusCritDamage = source.combatDetails.combatStats.criticalDamage;
 
-        if (combatStyle != "/combat_styles/magic") {
-            hitChance =
-                Math.pow(sourceAccuracyRating, 1.4) /
-                (Math.pow(sourceAccuracyRating, 1.4) + Math.pow(targetEvasionRating, 1.4));
-        }
+        let hitChance =
+            Math.pow(sourceAccuracyRating, 1.4) /
+            (Math.pow(sourceAccuracyRating, 1.4) + Math.pow(targetEvasionRating, 1.4));
 
         if (combatStyle == "/combat_styles/ranged") {
                 critChance = 0.3 * hitChance;
@@ -2701,7 +2698,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _data_actionDetailMap_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data/actionDetailMap.json */ "./src/combatsimulator/data/actionDetailMap.json");
 /* harmony import */ var _monster__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./monster */ "./src/combatsimulator/monster.js");
-
 
 
 

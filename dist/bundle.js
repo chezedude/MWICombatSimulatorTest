@@ -329,7 +329,7 @@ class CombatUnit {
             (1 + this.combatDetails.combatStats.magicDamage) *
             (1 + damageRatioBoost);
         this.combatDetails.magicEvasionRating =
-            (10 + this.combatDetails.defenseLevel) * (1 + this.combatDetails.combatStats.magicEvasion);
+            (10 + (this.combatDetails.defenseLevel + this.combatDetails.rangedLevel) / 2) * (1 + this.combatDetails.combatStats.magicEvasion);
         this.combatDetails.rangedEvasionRating += this.combatDetails.rangedEvasionRating * this.getBuffBoost("/buff_types/evasion").ratioBoost;
         this.combatDetails.magicEvasionRating += this.combatDetails.magicEvasionRating * this.getBuffBoost("/buff_types/evasion").ratioBoost;
         this.combatDetails.slashEvasionRating += this.combatDetails.slashEvasionRating * this.getBuffBoost("/buff_types/evasion").ratioBoost;
