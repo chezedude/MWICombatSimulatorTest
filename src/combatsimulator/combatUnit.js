@@ -2,6 +2,10 @@ class CombatUnit {
     isPlayer;
     isStunned = false;
     stunExpireTime = null;
+    isBlind = false;
+    blindExpireTime = null;
+    isSilenced = false;
+    silenceExpireTime = null;
 
     // Base levels which don't change after initialization
     staminaLevel = 1;
@@ -36,6 +40,7 @@ class CombatUnit {
         slashAccuracyRating: 11,
         smashAccuracyRating: 11,
         rangedAccuracyRating: 11,
+        magicAccuracyRating: 11,
         stabMaxDamage: 11,
         slashMaxDamage: 11,
         smashMaxDamage: 11,
@@ -46,6 +51,7 @@ class CombatUnit {
         slashEvasionRating: 11,
         smashEvasionRating: 11,
         rangedEvasionRating: 11,
+        magicEvasionRating: 11,
         totalArmor: 0.2,
         totalWaterResistance: 0.4,
         totalNatureResistance: 0.4,
@@ -54,12 +60,14 @@ class CombatUnit {
             combatStyleHrid: "/combat_styles/smash",
             damageType: "/damage_types/physical",
             attackInterval: 3000000000,
+            abilityHaste: 0,
             criticalRate: 0,
             criticalDamage: 0,
             stabAccuracy: 0,
             slashAccuracy: 0,
             smashAccuracy: 0,
             rangedAccuracy: 0,
+            magicAccuracy: 0,
             stabDamage: 0,
             slashDamage: 0,
             smashDamage: 0,
@@ -70,6 +78,7 @@ class CombatUnit {
             natureAmplify: 0,
             fireAmplify: 0,
             healingAmplify: 0,
+            armorPenetration: 0,
             physicalReflectPower: 0,
             maxHitpoints: 0,
             maxManapoints: 0,
@@ -77,11 +86,14 @@ class CombatUnit {
             slashEvasion: 0,
             smashEvasion: 0,
             rangedEvasion: 0,
+            magicEvasion: 0,
             armor: 0,
             waterResistance: 0,
             natureResistance: 0,
             fireResistance: 0,
+            tenacity: 0,
             lifeSteal: 0,
+            manaLeech: 0,
             HPRegen: 0.01,
             MPRegen: 0.01,
             combatDropRate: 0,
@@ -149,11 +161,21 @@ class CombatUnit {
         this.combatDetails.rangedEvasionRating =
             (10 + this.combatDetails.defenseLevel) * (1 + this.combatDetails.combatStats.rangedEvasion);
 
+        this.combatDetails.magicAccuracyRating =
+            (10 + this.combatDetails.magicLevel) *
+            (1 + this.combatDetails.combatStats.magicAccuracy) *
+            (1 + accuracyRatioBoost);
         this.combatDetails.magicMaxDamage =
             (10 + this.combatDetails.magicLevel) *
             (1 + this.combatDetails.combatStats.magicDamage) *
             (1 + damageRatioBoost);
-
+        this.combatDetails.magicEvasionRating =
+            (10 + (this.combatDetails.defenseLevel + this.combatDetails.rangedLevel) / 2) * (1 + this.combatDetails.combatStats.magicEvasion);
+        this.combatDetails.rangedEvasionRating += this.combatDetails.rangedEvasionRating * this.getBuffBoost("/buff_types/evasion").ratioBoost;
+        this.combatDetails.magicEvasionRating += this.combatDetails.magicEvasionRating * this.getBuffBoost("/buff_types/evasion").ratioBoost;
+        this.combatDetails.slashEvasionRating += this.combatDetails.slashEvasionRating * this.getBuffBoost("/buff_types/evasion").ratioBoost;
+        this.combatDetails.smashEvasionRating += this.combatDetails.smashEvasionRating * this.getBuffBoost("/buff_types/evasion").ratioBoost;
+        this.combatDetails.stabEvasionRating += this.combatDetails.stabEvasionRating * this.getBuffBoost("/buff_types/evasion").ratioBoost;
         this.combatDetails.combatStats.physicalAmplify += this.getBuffBoost("/buff_types/physical_amplify").flatBoost;
         this.combatDetails.combatStats.waterAmplify += this.getBuffBoost("/buff_types/water_amplify").flatBoost;
         this.combatDetails.combatStats.natureAmplify += this.getBuffBoost("/buff_types/nature_amplify").flatBoost;
@@ -206,8 +228,9 @@ class CombatUnit {
             this.combatDetails.totalFireResistance += boost.flatBoost;
             this.combatDetails.totalFireResistance += baseFireResistance * boost.ratioBoost;
         }
-
+        this.combatDetails.combatStats.tenacity += this.getBuffBoost("/buff_types/tenacity").flatBoost;
         this.combatDetails.combatStats.lifeSteal += this.getBuffBoost("/buff_types/life_steal").flatBoost;
+        this.combatDetails.combatStats.manaLeech += this.getBuffBoost("/buff_types/mana_leech").flatBoost;
         this.combatDetails.combatStats.HPRegen += this.getBuffBoost("/buff_types/hp_regen").flatBoost;
         this.combatDetails.combatStats.MPRegen += this.getBuffBoost("/buff_types/mp_regen").flatBoost;
         this.combatDetails.combatStats.physicalReflectPower += this.getBuffBoost(
@@ -217,6 +240,8 @@ class CombatUnit {
         this.combatDetails.combatStats.criticalRate += this.getBuffBoost("/buff_types/critical_rate").flatBoost;
         this.combatDetails.combatStats.criticalDamage += this.getBuffBoost("/buff_types/critical_damage").flatBoost;
         this.combatDetails.combatStats.combatDropRate += this.getBuffBoost("/buff_types/combat_drop_rate").flatBoost;
+        this.combatDetails.combatStats.armorPenetration += this.getBuffBoost("/buff_types/armor_penetration").flatBoost;
+        this.combatDetails.combatStats.abilityHaste += this.getBuffBoost("/buff_types/ability_haste").flatBoost;
         this.combatDetails.combatStats.combatRareFind += (1 + this.combatDetails.combatStats.combatRareFind) * this.getBuffBoost("/buff_types/combat_rare_find").ratioBoost;
     }
 
@@ -272,6 +297,10 @@ class CombatUnit {
     reset(currentTime = 0) {
         this.isStunned = false;
         this.stunExpireTime = null;
+        this.isBlind = false;
+        this.blindExpireTime = null;
+        this.isSilenced = false;
+        this.silenceExpireTime = null;
 
         this.clearBuffs();
         this.updateCombatDetails();

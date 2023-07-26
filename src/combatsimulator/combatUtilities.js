@@ -78,7 +78,9 @@ class CombatUtilities {
                 targetEvasionRating = target.combatDetails.rangedEvasionRating;
                 break;
             case "/combat_styles/magic":
+                sourceAccuracyRating = source.combatDetails.magicAccuracyRating;
                 sourceAutoAttackMaxDamage = source.combatDetails.magicMaxDamage;
+                targetEvasionRating = target.combatDetails.magicEvasionRating;
                 break;
             default:
                 throw new Error("Unknown combat style: " + combatStyle);
@@ -93,7 +95,7 @@ class CombatUtilities {
             case "/damage_types/physical":
                 sourceDamageMultiplier = 1 + source.combatDetails.combatStats.physicalAmplify;
                 sourceResistance = source.combatDetails.totalArmor;
-                targetResistance = target.combatDetails.totalArmor;
+                targetResistance = target.combatDetails.totalArmor - target.combatDetails.totalArmor * source.combatDetails.combatStats.armorPenetration;
                 targetReflectPower = target.combatDetails.combatStats.physicalReflectPower;
                 break;
             case "/damage_types/water":
@@ -115,16 +117,13 @@ class CombatUtilities {
                 throw new Error("Unknown damage type: " + damageType);
         }
 
-        let hitChance = 1;
         let critChance = 0;
         let bonusCritChance = source.combatDetails.combatStats.criticalRate;
         let bonusCritDamage = source.combatDetails.combatStats.criticalDamage;
 
-        if (combatStyle != "/combat_styles/magic") {
-            hitChance =
-                Math.pow(sourceAccuracyRating, 1.4) /
-                (Math.pow(sourceAccuracyRating, 1.4) + Math.pow(targetEvasionRating, 1.4));
-        }
+        let hitChance =
+            Math.pow(sourceAccuracyRating, 1.4) /
+            (Math.pow(sourceAccuracyRating, 1.4) + Math.pow(targetEvasionRating, 1.4));
 
         if (combatStyle == "/combat_styles/ranged") {
                 critChance = 0.3 * hitChance;
@@ -183,6 +182,11 @@ class CombatUtilities {
             lifeStealHeal = source.addHitpoints(Math.floor(source.combatDetails.combatStats.lifeSteal * damageDone));
         }
 
+        let manaLeech = 0;
+        if (!abilityEffect && didHit && source.combatDetails.combatStats.manaLeech > 0) {
+            manaLeech = source.addManapoints(Math.floor(source.combatDetails.combatStats.manaLeech * damageDone));
+        }
+
         let experienceGained = {
             source: {
                 attack: 0,
@@ -226,7 +230,7 @@ class CombatUtilities {
             experienceGained.target.defense += this.calculateDefenseExperience(reflectDamageDone);
         }
 
-        return { damageDone, didHit, reflectDamageDone, lifeStealHeal, experienceGained };
+        return { damageDone, didHit, reflectDamageDone, lifeStealHeal, manaLeech, experienceGained };
     }
 
     static processHeal(source, abilityEffect) {

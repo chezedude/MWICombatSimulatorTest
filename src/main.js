@@ -243,11 +243,13 @@ function updateCombatStatsUI() {
         "smashMaxDamage",
         "rangedAccuracyRating",
         "rangedMaxDamage",
+        "magicAccuracyRating",
         "magicMaxDamage",
         "stabEvasionRating",
         "slashEvasionRating",
         "smashEvasionRating",
         "rangedEvasionRating",
+        "magicEvasionRating",
         "totalArmor",
         "totalWaterResistance",
         "totalNatureResistance",
@@ -1142,8 +1144,8 @@ function createDamageTable(resultDiv, damageDone, secondsSimulated) {
             case "autoAttack":
                 abilityText = "Auto Attack";
                 break;
-            case "bleed":
-                abilityText = "Bleed";
+            case "damageOverTime":
+                abilityText = "Damage Over Time";
                 break;
             case "physicalReflect":
                 abilityText = "Physical Reflect";
