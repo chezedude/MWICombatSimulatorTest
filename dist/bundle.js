@@ -356,8 +356,7 @@ class CombatUnit {
         }
 
         let baseWaterResistance =
-            0.1 * this.combatDetails.defenseLevel +
-            0.3 * this.combatDetails.magicLevel +
+            0.1 * (this.combatDetails.defenseLevel + this.combatDetails.magicLevel) +
             this.combatDetails.combatStats.waterResistance;
         this.combatDetails.totalWaterResistance = baseWaterResistance;
         let waterResistanceBoosts = this.getBuffBoosts("/buff_types/water_resistance");
@@ -367,8 +366,7 @@ class CombatUnit {
         }
 
         let baseNatureResistance =
-            0.1 * this.combatDetails.defenseLevel +
-            0.3 * this.combatDetails.magicLevel +
+            0.1 * (this.combatDetails.defenseLevel + this.combatDetails.magicLevel) +
             this.combatDetails.combatStats.natureResistance;
         this.combatDetails.totalNatureResistance = baseNatureResistance;
         let natureResistanceBoosts = this.getBuffBoosts("/buff_types/nature_resistance");
@@ -378,8 +376,7 @@ class CombatUnit {
         }
 
         let baseFireResistance =
-            0.1 * this.combatDetails.defenseLevel +
-            0.3 * this.combatDetails.magicLevel +
+            0.1 * (this.combatDetails.defenseLevel + this.combatDetails.magicLevel) +
             this.combatDetails.combatStats.fireResistance;
         this.combatDetails.totalFireResistance = baseFireResistance;
         let fireResistanceBoosts = this.getBuffBoosts("/buff_types/fire_resistance");
