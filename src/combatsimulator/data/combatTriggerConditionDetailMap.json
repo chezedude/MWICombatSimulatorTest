@@ -19,7 +19,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 26
+        "sortIndex": 27
     },
     "/combat_trigger_conditions/blind_status": {
         "hrid": "/combat_trigger_conditions/blind_status",
@@ -30,7 +30,18 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 40
+        "sortIndex": 41
+    },
+    "/combat_trigger_conditions/channeling_coffee": {
+        "hrid": "/combat_trigger_conditions/channeling_coffee",
+        "name": "Channeling Coffee",
+        "isSingleTarget": true,
+        "isMultiTarget": false,
+        "allowedComparatorHrids": [
+            "/combat_trigger_comparators/is_active",
+            "/combat_trigger_comparators/is_inactive"
+        ],
+        "sortIndex": 18
     },
     "/combat_trigger_conditions/critical_coffee_damage": {
         "hrid": "/combat_trigger_conditions/critical_coffee_damage",
@@ -41,7 +52,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 19
+        "sortIndex": 20
     },
     "/combat_trigger_conditions/critical_coffee_rate": {
         "hrid": "/combat_trigger_conditions/critical_coffee_rate",
@@ -52,7 +63,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 18
+        "sortIndex": 19
     },
     "/combat_trigger_conditions/current_hp": {
         "hrid": "/combat_trigger_conditions/current_hp",
@@ -96,7 +107,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 32
+        "sortIndex": 33
     },
     "/combat_trigger_conditions/elemental_affinity_nature_amplify": {
         "hrid": "/combat_trigger_conditions/elemental_affinity_nature_amplify",
@@ -107,7 +118,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 31
+        "sortIndex": 32
     },
     "/combat_trigger_conditions/elemental_affinity_water_amplify": {
         "hrid": "/combat_trigger_conditions/elemental_affinity_water_amplify",
@@ -118,7 +129,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 30
+        "sortIndex": 31
     },
     "/combat_trigger_conditions/elusiveness": {
         "hrid": "/combat_trigger_conditions/elusiveness",
@@ -129,7 +140,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 24
+        "sortIndex": 25
     },
     "/combat_trigger_conditions/frenzy": {
         "hrid": "/combat_trigger_conditions/frenzy",
@@ -140,7 +151,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 27
+        "sortIndex": 28
     },
     "/combat_trigger_conditions/frost_surge": {
         "hrid": "/combat_trigger_conditions/frost_surge",
@@ -151,7 +162,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 35
+        "sortIndex": 36
     },
     "/combat_trigger_conditions/ice_spear": {
         "hrid": "/combat_trigger_conditions/ice_spear",
@@ -162,7 +173,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 34
+        "sortIndex": 35
     },
     "/combat_trigger_conditions/intelligence_coffee_max_mp": {
         "hrid": "/combat_trigger_conditions/intelligence_coffee_max_mp",
@@ -261,7 +272,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 25
+        "sortIndex": 26
     },
     "/combat_trigger_conditions/puncture": {
         "hrid": "/combat_trigger_conditions/puncture",
@@ -272,7 +283,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 33
+        "sortIndex": 34
     },
     "/combat_trigger_conditions/ranged_coffee": {
         "hrid": "/combat_trigger_conditions/ranged_coffee",
@@ -294,7 +305,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 41
+        "sortIndex": 42
     },
     "/combat_trigger_conditions/spike_shell": {
         "hrid": "/combat_trigger_conditions/spike_shell",
@@ -305,7 +316,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 28
+        "sortIndex": 29
     },
     "/combat_trigger_conditions/stamina_coffee_hp_regen": {
         "hrid": "/combat_trigger_conditions/stamina_coffee_hp_regen",
@@ -338,7 +349,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 42
+        "sortIndex": 43
     },
     "/combat_trigger_conditions/swiftness_coffee": {
         "hrid": "/combat_trigger_conditions/swiftness_coffee",
@@ -360,7 +371,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 20
+        "sortIndex": 21
     },
     "/combat_trigger_conditions/toughness_fire_resistance": {
         "hrid": "/combat_trigger_conditions/toughness_fire_resistance",
@@ -371,7 +382,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 23
+        "sortIndex": 24
     },
     "/combat_trigger_conditions/toughness_nature_resistance": {
         "hrid": "/combat_trigger_conditions/toughness_nature_resistance",
@@ -382,7 +393,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 22
+        "sortIndex": 23
     },
     "/combat_trigger_conditions/toughness_water_resistance": {
         "hrid": "/combat_trigger_conditions/toughness_water_resistance",
@@ -393,7 +404,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 21
+        "sortIndex": 22
     },
     "/combat_trigger_conditions/toxic_pollen_armor": {
         "hrid": "/combat_trigger_conditions/toxic_pollen_armor",
@@ -404,7 +415,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 36
+        "sortIndex": 37
     },
     "/combat_trigger_conditions/toxic_pollen_fire_resistance": {
         "hrid": "/combat_trigger_conditions/toxic_pollen_fire_resistance",
@@ -415,7 +426,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 39
+        "sortIndex": 40
     },
     "/combat_trigger_conditions/toxic_pollen_nature_resistance": {
         "hrid": "/combat_trigger_conditions/toxic_pollen_nature_resistance",
@@ -426,7 +437,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 38
+        "sortIndex": 39
     },
     "/combat_trigger_conditions/toxic_pollen_water_resistance": {
         "hrid": "/combat_trigger_conditions/toxic_pollen_water_resistance",
@@ -437,7 +448,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 37
+        "sortIndex": 38
     },
     "/combat_trigger_conditions/vampirism": {
         "hrid": "/combat_trigger_conditions/vampirism",
@@ -448,7 +459,7 @@
             "/combat_trigger_comparators/is_active",
             "/combat_trigger_comparators/is_inactive"
         ],
-        "sortIndex": 29
+        "sortIndex": 30
     },
     "/combat_trigger_conditions/wisdom_coffee": {
         "hrid": "/combat_trigger_conditions/wisdom_coffee",

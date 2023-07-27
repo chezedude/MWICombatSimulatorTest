@@ -260,6 +260,13 @@ function updateCombatStatsUI() {
     });
 
     [
+        "tenacity",
+    ].forEach((stat) => {
+        let element = document.getElementById("combatStat_" + stat);
+        element.innerHTML = Math.floor(player.combatDetails.combatStats[stat]);
+    });
+
+    [
         "physicalAmplify",
         "waterAmplify",
         "natureAmplify",
@@ -273,6 +280,9 @@ function updateCombatStatsUI() {
         "criticalDamage",
         "combatExperience",
         "taskDamage",
+        "manaLeech",
+        "armorPenetration",
+        "castSpeed",
     ].forEach((stat) => {
         let element = document.getElementById("combatStat_" + stat);
         let value = (100 * player.combatDetails.combatStats[stat]).toLocaleString([], {

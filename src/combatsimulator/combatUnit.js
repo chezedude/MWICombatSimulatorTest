@@ -100,6 +100,7 @@ class CombatUnit {
             combatDropQuantity: 0,
             combatRareFind: 0,
             combatExperience: 0,
+            castSpeed: 0,
             foodSlots: 1,
             drinkSlots: 1
         },
@@ -226,6 +227,7 @@ class CombatUnit {
             this.combatDetails.totalFireResistance += baseFireResistance * boost.ratioBoost;
         }
         this.combatDetails.combatStats.tenacity += this.getBuffBoost("/buff_types/tenacity").flatBoost;
+        this.combatDetails.combatStats.castSpeed += this.getBuffBoost("/buff_types/cast_speed").flatBoost;
         this.combatDetails.combatStats.lifeSteal += this.getBuffBoost("/buff_types/life_steal").flatBoost;
         this.combatDetails.combatStats.manaLeech += this.getBuffBoost("/buff_types/mana_leech").flatBoost;
         this.combatDetails.combatStats.HPRegen += this.getBuffBoost("/buff_types/hp_regen").flatBoost;

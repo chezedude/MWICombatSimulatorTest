@@ -104,6 +104,7 @@ class Player extends CombatUnit {
             "criticalDamage",
             "abilityHaste",
             "tenacity",
+            "castSpeed",
             "armorPenetration",
             "manaLeech",
         ].forEach((stat) => {
