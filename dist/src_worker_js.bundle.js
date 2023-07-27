@@ -472,7 +472,7 @@ class CombatSimulator extends EventTarget {
                 let successfulAbilityCast = this.tryCastAbility(unit, ability, this.simulationTime);
                 if (successfulAbilityCast) {
                     let castTimeReadyEvent = new _events_castTimeReadyEvent__WEBPACK_IMPORTED_MODULE_15__["default"](
-                        this.simulationTime + ability.castDuration,
+                        this.simulationTime + (ability.castDuration * (1 - unit.combatDetails.combatStats.castSpeed)),
                         unit,
                         ability
                     );
