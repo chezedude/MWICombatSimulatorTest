@@ -12,7 +12,7 @@ class Zone {
 
     getRandomEncounter() {
         let encounterHrids = [];
-        if (this.encounterAmount % this.monsterSpawnInfo.battlesPerBoss === 0 && this.monsterSpawnInfo.bossFightMonsters.length > 0) {
+        if (this.encounterAmount % 10 === 0 && this.monsterSpawnInfo.bossFightMonsters.length > 0) {
             this.encounterAmount = 1;
             for(let i = 0; i < this.monsterSpawnInfo.bossFightMonsters.length; i++) {
                 encounterHrids.push(this.monsterSpawnInfo.bossFightMonsters[i]);
