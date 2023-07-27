@@ -25,6 +25,7 @@ class Ability {
                 damageType: effect.damageType,
                 damageFlat: effect.baseDamageFlat + (this.level - 1) * effect.baseDamageFlatLevelBonus,
                 damageRatio: effect.baseDamageRatio + (this.level - 1) * effect.baseDamageRatioLevelBonus,
+                accuracyRatio: effect.bonusAccuracyRatio + (this.level - 1) * effect.bonusAccuracyRatioLevelBonus,
                 damageOverTimeRatio: effect.damageOverTimeRatio,
                 damageOverTimeDuration: effect.damageOverTimeDuration,
                 stunChance: effect.stunChance,

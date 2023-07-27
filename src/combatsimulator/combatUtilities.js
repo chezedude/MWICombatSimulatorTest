@@ -55,6 +55,7 @@ class CombatUtilities {
         let sourceAccuracyRating = 1;
         let sourceAutoAttackMaxDamage = 1;
         let targetEvasionRating = 1;
+        let bonusAccuracyRatio = abilityEffect ? abilityEffect.accuracyRatio : 0;
 
         switch (combatStyle) {
             case "/combat_styles/stab":
@@ -120,6 +121,8 @@ class CombatUtilities {
         let critChance = 0;
         let bonusCritChance = source.combatDetails.combatStats.criticalRate;
         let bonusCritDamage = source.combatDetails.combatStats.criticalDamage;
+
+        sourceAccuracyRating += sourceAccuracyRating * bonusAccuracyRatio;
 
         let hitChance =
             Math.pow(sourceAccuracyRating, 1.4) /

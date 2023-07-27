@@ -42,6 +42,7 @@ class Ability {
                 damageType: effect.damageType,
                 damageFlat: effect.baseDamageFlat + (this.level - 1) * effect.baseDamageFlatLevelBonus,
                 damageRatio: effect.baseDamageRatio + (this.level - 1) * effect.baseDamageRatioLevelBonus,
+                accuracyRatio: effect.bonusAccuracyRatio + (this.level - 1) * effect.bonusAccuracyRatioLevelBonus,
                 damageOverTimeRatio: effect.damageOverTimeRatio,
                 damageOverTimeDuration: effect.damageOverTimeDuration,
                 stunChance: effect.stunChance,
@@ -1367,6 +1368,7 @@ class CombatUtilities {
         let sourceAccuracyRating = 1;
         let sourceAutoAttackMaxDamage = 1;
         let targetEvasionRating = 1;
+        let bonusAccuracyRatio = abilityEffect ? abilityEffect.accuracyRatio : 0;
 
         switch (combatStyle) {
             case "/combat_styles/stab":
@@ -1432,6 +1434,8 @@ class CombatUtilities {
         let critChance = 0;
         let bonusCritChance = source.combatDetails.combatStats.criticalRate;
         let bonusCritDamage = source.combatDetails.combatStats.criticalDamage;
+
+        sourceAccuracyRating += sourceAccuracyRating * bonusAccuracyRatio;
 
         let hitChance =
             Math.pow(sourceAccuracyRating, 1.4) /
