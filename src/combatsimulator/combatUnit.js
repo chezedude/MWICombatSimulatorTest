@@ -281,14 +281,11 @@ class CombatUnit {
     getBuffBoost(type) {
         let boosts = this.getBuffBoosts(type);
 
-        if (boosts.length > 1) {
-            throw new Error("Using getBuffBoost with multiple buffs active: " + type);
+        let boost = {ratioBoost: 0, flatBoost: 0};
+        for(let i = 0; i < boosts.length; i++) {
+            boost.ratioBoost += boosts[i]?.ratioBoost ?? 0;
+            boost.flatBoost += boosts[i]?.flatBoost ?? 0;
         }
-
-        let boost = {
-            ratioBoost: boosts[0]?.ratioBoost ?? 0,
-            flatBoost: boosts[0]?.flatBoost ?? 0,
-        };
 
         return boost;
     }
