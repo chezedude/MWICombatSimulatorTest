@@ -282,6 +282,9 @@ function updateCombatStatsUI() {
         "taskDamage",
         "manaLeech",
         "armorPenetration",
+        "waterPenetration",
+        "naturePenetration",
+        "firePenetration",
         "castSpeed",
     ].forEach((stat) => {
         let element = document.getElementById("combatStat_" + stat);
@@ -989,6 +992,9 @@ function showManapointsGained(simResult) {
         switch (source) {
             case "regen":
                 sourceText = "Regen";
+                break;
+            case "manaleech":
+                sourceText = "Mana Leech";
                 break;
             default:
                 sourceText = itemDetailMap[source].name;

@@ -79,6 +79,9 @@ class CombatUnit {
             fireAmplify: 0,
             healingAmplify: 0,
             armorPenetration: 0,
+            waterPenetration: 0,
+            naturePenetration: 0,
+            firePenetration: 0,
             physicalReflectPower: 0,
             maxHitpoints: 0,
             maxManapoints: 0,
@@ -240,6 +243,9 @@ class CombatUnit {
         this.combatDetails.combatStats.criticalDamage += this.getBuffBoost("/buff_types/critical_damage").flatBoost;
         this.combatDetails.combatStats.combatDropRate += this.getBuffBoost("/buff_types/combat_drop_rate").flatBoost;
         this.combatDetails.combatStats.armorPenetration += this.getBuffBoost("/buff_types/armor_penetration").flatBoost;
+        this.combatDetails.combatStats.waterPenetration += this.getBuffBoost("/buff_types/water_penetration").flatBoost;
+        this.combatDetails.combatStats.naturePenetration += this.getBuffBoost("/buff_types/nature_penetration").flatBoost;
+        this.combatDetails.combatStats.firePenetration += this.getBuffBoost("/buff_types/fire_penetration").flatBoost;
         this.combatDetails.combatStats.abilityHaste += this.getBuffBoost("/buff_types/ability_haste").flatBoost;
         this.combatDetails.combatStats.combatRareFind += (1 + this.combatDetails.combatStats.combatRareFind) * this.getBuffBoost("/buff_types/combat_rare_find").ratioBoost;
     }
