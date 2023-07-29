@@ -1305,29 +1305,29 @@
             "slashAccuracyRating": 10,
             "smashAccuracyRating": 10,
             "rangedAccuracyRating": 10,
-            "magicAccuracyRating": 370,
+            "magicAccuracyRating": 350,
             "stabMaxDamage": 10,
             "slashMaxDamage": 10,
             "smashMaxDamage": 10,
             "rangedMaxDamage": 10,
-            "magicMaxDamage": 370,
-            "stabEvasionRating": 210,
-            "slashEvasionRating": 210,
-            "smashEvasionRating": 210,
-            "rangedEvasionRating": 210,
-            "magicEvasionRating": 110,
-            "totalArmor": 40,
-            "totalWaterResistance": 56,
-            "totalNatureResistance": 86,
-            "totalFireResistance": 86,
-            "combatLevel": 560,
+            "magicMaxDamage": 350,
+            "stabEvasionRating": 190,
+            "slashEvasionRating": 190,
+            "smashEvasionRating": 190,
+            "rangedEvasionRating": 190,
+            "magicEvasionRating": 100,
+            "totalArmor": 36,
+            "totalWaterResistance": 52,
+            "totalNatureResistance": 82,
+            "totalFireResistance": 82,
+            "combatLevel": 548,
             "staminaLevel": 940,
             "intelligenceLevel": 940,
             "attackLevel": 0,
             "powerLevel": 0,
-            "defenseLevel": 200,
+            "defenseLevel": 180,
             "rangedLevel": 0,
-            "magicLevel": 360,
+            "magicLevel": 340,
             "combatStats": {
                 "combatStyleHrids": [
                     "/combat_styles/magic"
@@ -1385,8 +1385,8 @@
         },
         "abilities": [
             {
-                "abilityHrid": "/abilities/frenzy",
-                "level": 25
+                "abilityHrid": "/abilities/toughness",
+                "level": 30
             },
             {
                 "abilityHrid": "/abilities/fire_storm",
@@ -1421,8 +1421,8 @@
                 "maxCount": 30
             },
             {
-                "itemHrid": "/items/frenzy",
-                "dropRate": 0.01,
+                "itemHrid": "/items/toughness",
+                "dropRate": 0.015,
                 "minCount": 1,
                 "maxCount": 1
             },
@@ -1448,7 +1448,7 @@
         "rareDropTable": [
             {
                 "itemHrid": "/items/large_treasure_chest",
-                "dropRate": 0.016533333333333334,
+                "dropRate": 0.016213333333333333,
                 "minCount": 1,
                 "maxCount": 1
             }
@@ -1494,7 +1494,7 @@
                     "/combat_styles/ranged"
                 ],
                 "damageType": "/damage_types/physical",
-                "attackInterval": 3000000000,
+                "attackInterval": 3200000000,
                 "castSpeed": 0,
                 "abilityHaste": 0,
                 "criticalRate": 0,
@@ -1546,10 +1546,6 @@
         },
         "abilities": [
             {
-                "abilityHrid": "/abilities/frenzy",
-                "level": 25
-            },
-            {
                 "abilityHrid": "/abilities/vampirism",
                 "level": 10
             },
@@ -1560,6 +1556,10 @@
             {
                 "abilityHrid": "/abilities/silencing_shot",
                 "level": 10
+            },
+            {
+                "abilityHrid": "/abilities/rain_of_arrows",
+                "level": 25
             }
         ],
         "dropTable": [
@@ -1588,12 +1588,6 @@
                 "maxCount": 30
             },
             {
-                "itemHrid": "/items/frenzy",
-                "dropRate": 0.01,
-                "minCount": 1,
-                "maxCount": 1
-            },
-            {
                 "itemHrid": "/items/vampirism",
                 "dropRate": 0.005,
                 "minCount": 1,
@@ -1608,6 +1602,12 @@
             {
                 "itemHrid": "/items/silencing_shot",
                 "dropRate": 0.005,
+                "minCount": 1,
+                "maxCount": 1
+            },
+            {
+                "itemHrid": "/items/rain_of_arrows",
+                "dropRate": 0.01,
                 "minCount": 1,
                 "maxCount": 1
             }
