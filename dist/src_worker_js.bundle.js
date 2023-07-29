@@ -229,7 +229,11 @@ class CombatSimulator extends EventTarget {
                 this.dispatchEvent(progressEvent);
             }
         }
-
+        for(let i = 0; i < this.simResult.timeSpentAlive.length; i++) {
+            if(this.simResult.timeSpentAlive[i].alive == true) {
+                this.simResult.updateTimeSpentAlive(this.simResult.timeSpentAlive[i].name, false, simulationTimeLimit);
+            }
+        }
         this.simResult.simulatedTime = this.simulationTime;
         this.simResult.setDropRateMultipliers(this.players[0]);
         this.simResult.setManaUsed(this.players[0]);
@@ -319,7 +323,7 @@ class CombatSimulator extends EventTarget {
 
         this.enemies.forEach((enemy) => {
             enemy.reset(this.simulationTime);
-
+            this.simResult.updateTimeSpentAlive(enemy.hrid, true, this.simulationTime);
             // console.log(enemy.hrid, "spawned");
         });
 
@@ -409,6 +413,9 @@ class CombatSimulator extends EventTarget {
         if (target.combatDetails.currentHitpoints == 0) {
             this.eventQueue.clearEventsForUnit(target);
             this.simResult.addDeath(target);
+            if(!target.isPlayer) {
+                this.simResult.updateTimeSpentAlive(target.hrid, false, this.simulationTime);
+            }
             // console.log(target.hrid, "died");
         }
 
@@ -416,6 +423,9 @@ class CombatSimulator extends EventTarget {
         if (event.source.combatDetails.currentHitpoints == 0 && attackResult.reflectDamageDone != 0) {
             this.eventQueue.clearEventsForUnit(event.source);
             this.simResult.addDeath(event.source);
+            if(!event.source.isPlayer) {
+                this.simResult.updateTimeSpentAlive(event.source.hrid, false, this.simulationTime);
+            }
         }
 
         if (!this.checkEncounterEnd()) {
@@ -593,6 +603,9 @@ class CombatSimulator extends EventTarget {
         if (event.target.combatDetails.currentHitpoints == 0) {
             this.eventQueue.clearEventsForUnit(event.target);
             this.simResult.addDeath(event.target);
+            if(!event.target.isPlayer) {
+                this.simResult.updateTimeSpentAlive(event.target.hrid, false, this.simulationTime);
+            }
         }
 
         this.checkEncounterEnd();
@@ -798,6 +811,9 @@ class CombatSimulator extends EventTarget {
         if (source.combatDetails.currentHitpoints == 0) {
             this.eventQueue.clearEventsForUnit(source);
             this.simResult.addDeath(source);
+            if(!source.isPlayer) {
+                this.simResult.updateTimeSpentAlive(source.hrid, false, this.simulationTime);
+            }
         }
 
         this.checkEncounterEnd();
@@ -905,6 +921,9 @@ class CombatSimulator extends EventTarget {
             if (target.combatDetails.currentHitpoints == 0) {
                 this.eventQueue.clearEventsForUnit(target);
                 this.simResult.addDeath(target);
+                if(!target.isPlayer) {
+                    this.simResult.updateTimeSpentAlive(target.hrid, false, this.simulationTime);
+                }
                 // console.log(target.hrid, "died");
             }
         }
@@ -2490,6 +2509,7 @@ class SimResult {
         this.rareFindMultiplier = 1;
         this.playerRanOutOfMana = false;
         this.manaUsed = {};
+        this.timeSpentAlive = [];
     }
 
     addDeath(unit) {
@@ -2498,6 +2518,22 @@ class SimResult {
         }
 
         this.deaths[unit.hrid] += 1;
+    }
+
+    updateTimeSpentAlive(name, alive, time) {
+        const i = this.timeSpentAlive.findIndex(e => e.name === name);
+        if(alive) {
+            if (i !== -1) {
+                this.timeSpentAlive[i].alive = true;
+                this.timeSpentAlive[i].spawnedAt = time;
+            } else {
+                this.timeSpentAlive.push({name: name, timeSpentAlive: 0, spawnedAt: time, alive: true});
+            }
+        } else {
+            const timeAlive = time - this.timeSpentAlive[i].spawnedAt;
+            this.timeSpentAlive[i].alive = false;
+            this.timeSpentAlive[i].timeSpentAlive += timeAlive;
+        }
     }
 
     addExperienceGain(unit, type, experience) {

@@ -1031,6 +1031,9 @@ function showDamageDone(simResult) {
     for (const [target, abilities] of Object.entries(simResult.attacks["player"])) {
         let targetDamageDone = {};
 
+        const i = simResult.timeSpentAlive.findIndex(e => e.name === target);
+        secondsSimulated = simResult.timeSpentAlive[i].timeSpentAlive / ONE_SECOND;
+
         for (const [ability, abilityCasts] of Object.entries(abilities)) {
             let casts = Object.values(abilityCasts).reduce((prev, cur) => prev + cur, 0);
             let misses = abilityCasts["miss"] ?? 0;
@@ -1070,7 +1073,7 @@ function showDamageDone(simResult) {
 
         enemyIndex++;
     }
-
+    secondsSimulated = simResult.simulatedTime / ONE_SECOND;
     let totalResultDiv = document.getElementById("simulationResultTotalDamageDone");
     createDamageTable(totalResultDiv, totalDamageDone, secondsSimulated);
 }
@@ -1090,7 +1093,8 @@ function showDamageTaken(simResult) {
         if (source == "player") {
             continue;
         }
-
+        const i = simResult.timeSpentAlive.findIndex(e => e.name === source);
+        secondsSimulated = simResult.timeSpentAlive[i].timeSpentAlive / ONE_SECOND;
         let sourceDamageTaken = {};
 
         for (const [ability, abilityCasts] of Object.entries(targets["player"])) {
@@ -1132,7 +1136,7 @@ function showDamageTaken(simResult) {
 
         enemyIndex++;
     }
-
+    secondsSimulated = simResult.simulatedTime / ONE_SECOND;
     let totalResultDiv = document.getElementById("simulationResultTotalDamageTaken");
     createDamageTable(totalResultDiv, totalDamageTaken, secondsSimulated);
 }
