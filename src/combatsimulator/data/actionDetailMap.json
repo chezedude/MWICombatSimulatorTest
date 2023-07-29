@@ -51,7 +51,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 37
+        "sortIndex": 38
     },
     "/actions/brewing/attack_coffee": {
         "hrid": "/actions/brewing/attack_coffee",
@@ -155,7 +155,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 43
+        "sortIndex": 44
     },
     "/actions/brewing/brewing_tea": {
         "hrid": "/actions/brewing/brewing_tea",
@@ -206,6 +206,60 @@
             "battlesPerBoss": 0
         },
         "sortIndex": 9
+    },
+    "/actions/brewing/channeling_coffee": {
+        "hrid": "/actions/brewing/channeling_coffee",
+        "function": "/action_functions/production",
+        "type": "/action_types/brewing",
+        "category": "/action_categories/brewing/coffee",
+        "name": "Channeling Coffee",
+        "levelRequirement": {
+            "skillHrid": "/skills/brewing",
+            "level": 63
+        },
+        "baseTimeCost": 14000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/brewing",
+            "value": 50
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/medium_artisans_crate",
+                "dropRate": 0.0002765432098765432,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "",
+        "inputItems": [
+            {
+                "itemHrid": "/items/fieriosa_coffee_bean",
+                "count": 2
+            },
+            {
+                "itemHrid": "/items/dragon_fruit",
+                "count": 1
+            },
+            {
+                "itemHrid": "/items/holy_milk",
+                "count": 1
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/channeling_coffee",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 35
     },
     "/actions/brewing/cheesesmithing_tea": {
         "hrid": "/actions/brewing/cheesesmithing_tea",
@@ -409,7 +463,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 40
+        "sortIndex": 41
     },
     "/actions/brewing/defense_coffee": {
         "hrid": "/actions/brewing/defense_coffee",
@@ -1291,7 +1345,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 35
+        "sortIndex": 36
     },
     "/actions/brewing/super_cooking_tea": {
         "hrid": "/actions/brewing/super_cooking_tea",
@@ -1399,7 +1453,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 38
+        "sortIndex": 39
     },
     "/actions/brewing/super_defense_coffee": {
         "hrid": "/actions/brewing/super_defense_coffee",
@@ -1669,7 +1723,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 42
+        "sortIndex": 43
     },
     "/actions/brewing/super_milking_tea": {
         "hrid": "/actions/brewing/super_milking_tea",
@@ -1777,7 +1831,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 36
+        "sortIndex": 37
     },
     "/actions/brewing/super_ranged_coffee": {
         "hrid": "/actions/brewing/super_ranged_coffee",
@@ -1831,7 +1885,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 39
+        "sortIndex": 40
     },
     "/actions/brewing/super_stamina_coffee": {
         "hrid": "/actions/brewing/super_stamina_coffee",
@@ -1939,7 +1993,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 41
+        "sortIndex": 42
     },
     "/actions/brewing/super_woodcutting_tea": {
         "hrid": "/actions/brewing/super_woodcutting_tea",
@@ -5147,6 +5201,98 @@
         },
         "sortIndex": 4
     },
+    "/actions/cheesesmithing/colossus_plate_body": {
+        "hrid": "/actions/cheesesmithing/colossus_plate_body",
+        "function": "/action_functions/production",
+        "type": "/action_types/cheesesmithing",
+        "category": "/action_categories/cheesesmithing/body",
+        "name": "Colossus Plate Body",
+        "levelRequirement": {
+            "skillHrid": "/skills/cheesesmithing",
+            "level": 90
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/cheesesmithing",
+            "value": 50000
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0008333333333333334,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "/items/holy_plate_body",
+        "inputItems": [
+            {
+                "itemHrid": "/items/colossus_core",
+                "count": 10
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/colossus_plate_body",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 157
+    },
+    "/actions/cheesesmithing/colossus_plate_legs": {
+        "hrid": "/actions/cheesesmithing/colossus_plate_legs",
+        "function": "/action_functions/production",
+        "type": "/action_types/cheesesmithing",
+        "category": "/action_categories/cheesesmithing/legs",
+        "name": "Colossus Plate Legs",
+        "levelRequirement": {
+            "skillHrid": "/skills/cheesesmithing",
+            "level": 90
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/cheesesmithing",
+            "value": 40000
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0008333333333333334,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "/items/holy_plate_legs",
+        "inputItems": [
+            {
+                "itemHrid": "/items/colossus_core",
+                "count": 8
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/colossus_plate_legs",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 158
+    },
     "/actions/cheesesmithing/crimson_boots": {
         "hrid": "/actions/cheesesmithing/crimson_boots",
         "function": "/action_functions/production",
@@ -6094,6 +6240,98 @@
             "battlesPerBoss": 0
         },
         "sortIndex": 89
+    },
+    "/actions/cheesesmithing/demonic_plate_body": {
+        "hrid": "/actions/cheesesmithing/demonic_plate_body",
+        "function": "/action_functions/production",
+        "type": "/action_types/cheesesmithing",
+        "category": "/action_categories/cheesesmithing/body",
+        "name": "Demonic Plate Body",
+        "levelRequirement": {
+            "skillHrid": "/skills/cheesesmithing",
+            "level": 90
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/cheesesmithing",
+            "value": 50000
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0008333333333333334,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "/items/holy_plate_body",
+        "inputItems": [
+            {
+                "itemHrid": "/items/demonic_core",
+                "count": 10
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/demonic_plate_body",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 159
+    },
+    "/actions/cheesesmithing/demonic_plate_legs": {
+        "hrid": "/actions/cheesesmithing/demonic_plate_legs",
+        "function": "/action_functions/production",
+        "type": "/action_types/cheesesmithing",
+        "category": "/action_categories/cheesesmithing/legs",
+        "name": "Demonic Plate Legs",
+        "levelRequirement": {
+            "skillHrid": "/skills/cheesesmithing",
+            "level": 90
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/cheesesmithing",
+            "value": 40000
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0008333333333333334,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "/items/holy_plate_legs",
+        "inputItems": [
+            {
+                "itemHrid": "/items/demonic_core",
+                "count": 8
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/demonic_plate_legs",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 160
     },
     "/actions/cheesesmithing/granite_bludgeon": {
         "hrid": "/actions/cheesesmithing/granite_bludgeon",
@@ -8411,7 +8649,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 157
+        "sortIndex": 161
     },
     "/actions/cheesesmithing/stalactite_spear": {
         "hrid": "/actions/cheesesmithing/stalactite_spear",
@@ -9880,22 +10118,22 @@
                 {
                     "combatMonsterHrid": "/monsters/gummy_bear",
                     "rate": 1,
-                    "strength": 60
+                    "strength": 50
                 },
                 {
                     "combatMonsterHrid": "/monsters/panda",
                     "rate": 1,
-                    "strength": 90
+                    "strength": 70
                 },
                 {
                     "combatMonsterHrid": "/monsters/black_bear",
                     "rate": 1,
-                    "strength": 80
+                    "strength": 70
                 },
                 {
                     "combatMonsterHrid": "/monsters/grizzly_bear",
                     "rate": 1,
-                    "strength": 90
+                    "strength": 85
                 },
                 {
                     "combatMonsterHrid": "/monsters/polar_bear",
@@ -10281,28 +10519,28 @@
         "inputItems": null,
         "outputItems": null,
         "monsterSpawnInfo": {
-            "maxSpawnCount": 2,
-            "maxTotalStrength": 200,
+            "maxSpawnCount": 3,
+            "maxTotalStrength": 250,
             "spawns": [
                 {
                     "combatMonsterHrid": "/monsters/gobo_stabby",
                     "rate": 1,
-                    "strength": 100
+                    "strength": 80
                 },
                 {
                     "combatMonsterHrid": "/monsters/gobo_slashy",
                     "rate": 1,
-                    "strength": 100
+                    "strength": 70
                 },
                 {
                     "combatMonsterHrid": "/monsters/gobo_smashy",
                     "rate": 1,
-                    "strength": 100
+                    "strength": 70
                 },
                 {
                     "combatMonsterHrid": "/monsters/gobo_shooty",
                     "rate": 1,
-                    "strength": 100
+                    "strength": 90
                 },
                 {
                     "combatMonsterHrid": "/monsters/gobo_boomy",
@@ -10489,7 +10727,7 @@
                 {
                     "combatMonsterHrid": "/monsters/stalactite_golem",
                     "rate": 1,
-                    "strength": 85
+                    "strength": 80
                 },
                 {
                     "combatMonsterHrid": "/monsters/granite_golem",
@@ -10676,12 +10914,12 @@
                 {
                     "combatMonsterHrid": "/monsters/soul_hunter",
                     "rate": 1,
-                    "strength": 85
+                    "strength": 80
                 },
                 {
                     "combatMonsterHrid": "/monsters/infernal_warlock",
                     "rate": 1,
-                    "strength": 100
+                    "strength": 90
                 }
             ],
             "bossFightMonsters": [
@@ -10758,12 +10996,12 @@
                 {
                     "combatMonsterHrid": "/monsters/myconid",
                     "rate": 1,
-                    "strength": 65
+                    "strength": 60
                 },
                 {
                     "combatMonsterHrid": "/monsters/treant",
                     "rate": 1,
-                    "strength": 80
+                    "strength": 70
                 },
                 {
                     "combatMonsterHrid": "/monsters/centaur_archer",
@@ -11015,12 +11253,12 @@
                 {
                     "combatMonsterHrid": "/monsters/eye",
                     "rate": 1,
-                    "strength": 70
+                    "strength": 60
                 },
                 {
                     "combatMonsterHrid": "/monsters/eyes",
                     "rate": 1,
-                    "strength": 85
+                    "strength": 75
                 },
                 {
                     "combatMonsterHrid": "/monsters/veyes",
@@ -11381,7 +11619,7 @@
                 }
             ],
             "bossFightMonsters": [
-                "/monsters/cryomancer"
+                "/monsters/chronofrost_sorcerer"
             ],
             "battlesPerBoss": 2
         },
@@ -11646,7 +11884,7 @@
                 {
                     "combatMonsterHrid": "/monsters/vampire",
                     "rate": 1,
-                    "strength": 85
+                    "strength": 80
                 },
                 {
                     "combatMonsterHrid": "/monsters/werewolf",
@@ -13443,7 +13681,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 73
+        "sortIndex": 76
     },
     "/actions/crafting/arcane_crossbow": {
         "hrid": "/actions/crafting/arcane_crossbow",
@@ -13489,7 +13727,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 69
+        "sortIndex": 72
     },
     "/actions/crafting/arcane_fire_staff": {
         "hrid": "/actions/crafting/arcane_fire_staff",
@@ -13535,7 +13773,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 74
+        "sortIndex": 77
     },
     "/actions/crafting/arcane_lumber": {
         "hrid": "/actions/crafting/arcane_lumber",
@@ -13581,7 +13819,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 68
+        "sortIndex": 71
     },
     "/actions/crafting/arcane_nature_staff": {
         "hrid": "/actions/crafting/arcane_nature_staff",
@@ -13627,7 +13865,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 72
+        "sortIndex": 75
     },
     "/actions/crafting/arcane_shield": {
         "hrid": "/actions/crafting/arcane_shield",
@@ -13673,7 +13911,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 71
+        "sortIndex": 74
     },
     "/actions/crafting/arcane_water_staff": {
         "hrid": "/actions/crafting/arcane_water_staff",
@@ -13719,7 +13957,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 70
+        "sortIndex": 73
     },
     "/actions/crafting/basic_task_ring": {
         "hrid": "/actions/crafting/basic_task_ring",
@@ -14639,7 +14877,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 53
+        "sortIndex": 54
     },
     "/actions/crafting/crushed_pearl": {
         "hrid": "/actions/crafting/crushed_pearl",
@@ -14739,7 +14977,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 48
+        "sortIndex": 49
     },
     "/actions/crafting/earrings_of_gathering": {
         "hrid": "/actions/crafting/earrings_of_gathering",
@@ -14839,7 +15077,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 58
+        "sortIndex": 59
     },
     "/actions/crafting/earrings_of_regeneration": {
         "hrid": "/actions/crafting/earrings_of_regeneration",
@@ -14893,7 +15131,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 41
+        "sortIndex": 42
     },
     "/actions/crafting/earrings_of_resistance": {
         "hrid": "/actions/crafting/earrings_of_resistance",
@@ -14947,7 +15185,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 55
+        "sortIndex": 56
     },
     "/actions/crafting/expert_task_ring": {
         "hrid": "/actions/crafting/expert_task_ring",
@@ -14994,6 +15232,68 @@
             "battlesPerBoss": 0
         },
         "sortIndex": 6
+    },
+    "/actions/crafting/eye_watch": {
+        "hrid": "/actions/crafting/eye_watch",
+        "function": "/action_functions/production",
+        "type": "/action_types/crafting",
+        "category": "/action_categories/crafting/off_hand",
+        "name": "Eye Watch",
+        "levelRequirement": {
+            "skillHrid": "/skills/crafting",
+            "level": 70
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/crafting",
+            "value": 15000
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0006944444444444445,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "",
+        "inputItems": [
+            {
+                "itemHrid": "/items/eye_of_the_watcher",
+                "count": 10
+            },
+            {
+                "itemHrid": "/items/rainbow_cheese",
+                "count": 150
+            },
+            {
+                "itemHrid": "/items/redwood_lumber",
+                "count": 150
+            },
+            {
+                "itemHrid": "/items/crimson_cheese",
+                "count": 150
+            },
+            {
+                "itemHrid": "/items/ginkgo_lumber",
+                "count": 150
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/eye_watch",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 67
     },
     "/actions/crafting/fighter_necklace": {
         "hrid": "/actions/crafting/fighter_necklace",
@@ -15043,7 +15343,53 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 42
+        "sortIndex": 43
+    },
+    "/actions/crafting/frost_staff": {
+        "hrid": "/actions/crafting/frost_staff",
+        "function": "/action_functions/production",
+        "type": "/action_types/crafting",
+        "category": "/action_categories/crafting/staff",
+        "name": "Frost Staff",
+        "levelRequirement": {
+            "skillHrid": "/skills/crafting",
+            "level": 87
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/crafting",
+            "value": 48000
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0008125,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "/items/arcane_water_staff",
+        "inputItems": [
+            {
+                "itemHrid": "/items/frost_sphere",
+                "count": 20
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/frost_staff",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 80
     },
     "/actions/crafting/ginkgo_bow": {
         "hrid": "/actions/crafting/ginkgo_bow",
@@ -15089,7 +15435,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 51
+        "sortIndex": 52
     },
     "/actions/crafting/ginkgo_crossbow": {
         "hrid": "/actions/crafting/ginkgo_crossbow",
@@ -15135,7 +15481,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 44
+        "sortIndex": 45
     },
     "/actions/crafting/ginkgo_fire_staff": {
         "hrid": "/actions/crafting/ginkgo_fire_staff",
@@ -15181,7 +15527,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 54
+        "sortIndex": 55
     },
     "/actions/crafting/ginkgo_lumber": {
         "hrid": "/actions/crafting/ginkgo_lumber",
@@ -15227,7 +15573,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 43
+        "sortIndex": 44
     },
     "/actions/crafting/ginkgo_nature_staff": {
         "hrid": "/actions/crafting/ginkgo_nature_staff",
@@ -15273,7 +15619,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 49
+        "sortIndex": 50
     },
     "/actions/crafting/ginkgo_shield": {
         "hrid": "/actions/crafting/ginkgo_shield",
@@ -15319,7 +15665,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 47
+        "sortIndex": 48
     },
     "/actions/crafting/ginkgo_water_staff": {
         "hrid": "/actions/crafting/ginkgo_water_staff",
@@ -15365,7 +15711,53 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 45
+        "sortIndex": 46
+    },
+    "/actions/crafting/infernal_battlestaff": {
+        "hrid": "/actions/crafting/infernal_battlestaff",
+        "function": "/action_functions/production",
+        "type": "/action_types/crafting",
+        "category": "/action_categories/crafting/staff",
+        "name": "Infernal Battlestaff",
+        "levelRequirement": {
+            "skillHrid": "/skills/crafting",
+            "level": 87
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/crafting",
+            "value": 48000
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0008125,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "/items/arcane_fire_staff",
+        "inputItems": [
+            {
+                "itemHrid": "/items/infernal_ember",
+                "count": 20
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/infernal_battlestaff",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 81
     },
     "/actions/crafting/lumber": {
         "hrid": "/actions/crafting/lumber",
@@ -15457,7 +15849,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 67
+        "sortIndex": 70
     },
     "/actions/crafting/necklace_of_efficiency": {
         "hrid": "/actions/crafting/necklace_of_efficiency",
@@ -15565,7 +15957,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 59
+        "sortIndex": 60
     },
     "/actions/crafting/purpleheart_bow": {
         "hrid": "/actions/crafting/purpleheart_bow",
@@ -15703,7 +16095,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 39
+        "sortIndex": 40
     },
     "/actions/crafting/purpleheart_lumber": {
         "hrid": "/actions/crafting/purpleheart_lumber",
@@ -15937,7 +16329,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 50
+        "sortIndex": 51
     },
     "/actions/crafting/redwood_bow": {
         "hrid": "/actions/crafting/redwood_bow",
@@ -15983,7 +16375,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 65
+        "sortIndex": 66
     },
     "/actions/crafting/redwood_crossbow": {
         "hrid": "/actions/crafting/redwood_crossbow",
@@ -16029,7 +16421,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 61
+        "sortIndex": 62
     },
     "/actions/crafting/redwood_fire_staff": {
         "hrid": "/actions/crafting/redwood_fire_staff",
@@ -16075,7 +16467,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 66
+        "sortIndex": 69
     },
     "/actions/crafting/redwood_lumber": {
         "hrid": "/actions/crafting/redwood_lumber",
@@ -16121,7 +16513,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 60
+        "sortIndex": 61
     },
     "/actions/crafting/redwood_nature_staff": {
         "hrid": "/actions/crafting/redwood_nature_staff",
@@ -16167,7 +16559,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 64
+        "sortIndex": 65
     },
     "/actions/crafting/redwood_shield": {
         "hrid": "/actions/crafting/redwood_shield",
@@ -16213,7 +16605,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 63
+        "sortIndex": 64
     },
     "/actions/crafting/redwood_water_staff": {
         "hrid": "/actions/crafting/redwood_water_staff",
@@ -16259,7 +16651,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 62
+        "sortIndex": 63
     },
     "/actions/crafting/ring_of_armor": {
         "hrid": "/actions/crafting/ring_of_armor",
@@ -16313,7 +16705,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 46
+        "sortIndex": 47
     },
     "/actions/crafting/ring_of_gathering": {
         "hrid": "/actions/crafting/ring_of_gathering",
@@ -16413,7 +16805,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 57
+        "sortIndex": 58
     },
     "/actions/crafting/ring_of_regeneration": {
         "hrid": "/actions/crafting/ring_of_regeneration",
@@ -16467,7 +16859,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 40
+        "sortIndex": 41
     },
     "/actions/crafting/ring_of_resistance": {
         "hrid": "/actions/crafting/ring_of_resistance",
@@ -16521,7 +16913,207 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 52
+        "sortIndex": 53
+    },
+    "/actions/crafting/soul_hunter_crossbow": {
+        "hrid": "/actions/crafting/soul_hunter_crossbow",
+        "function": "/action_functions/production",
+        "type": "/action_types/crafting",
+        "category": "/action_categories/crafting/crossbow",
+        "name": "Soul Hunter Crossbow",
+        "levelRequirement": {
+            "skillHrid": "/skills/crafting",
+            "level": 86
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/crafting",
+            "value": 48000
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0008055555555555556,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "/items/arcane_crossbow",
+        "inputItems": [
+            {
+                "itemHrid": "/items/soul_fragment",
+                "count": 20
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/soul_hunter_crossbow",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 79
+    },
+    "/actions/crafting/treant_shield": {
+        "hrid": "/actions/crafting/treant_shield",
+        "function": "/action_functions/production",
+        "type": "/action_types/crafting",
+        "category": "/action_categories/crafting/off_hand",
+        "name": "Treant Shield",
+        "levelRequirement": {
+            "skillHrid": "/skills/crafting",
+            "level": 40
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/crafting",
+            "value": 4000
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/medium_artisans_crate",
+                "dropRate": 0.0009722222222222222,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "/items/purpleheart_shield",
+        "inputItems": [
+            {
+                "itemHrid": "/items/treant_bark",
+                "count": 4
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/treant_shield",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 39
+    },
+    "/actions/crafting/vampiric_bow": {
+        "hrid": "/actions/crafting/vampiric_bow",
+        "function": "/action_functions/production",
+        "type": "/action_types/crafting",
+        "category": "/action_categories/crafting/bow",
+        "name": "Vampiric Bow",
+        "levelRequirement": {
+            "skillHrid": "/skills/crafting",
+            "level": 86
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/crafting",
+            "value": 48000
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0008055555555555556,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "/items/arcane_bow",
+        "inputItems": [
+            {
+                "itemHrid": "/items/vampire_fang",
+                "count": 20
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/vampiric_bow",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 78
+    },
+    "/actions/crafting/watchful_relic": {
+        "hrid": "/actions/crafting/watchful_relic",
+        "function": "/action_functions/production",
+        "type": "/action_types/crafting",
+        "category": "/action_categories/crafting/off_hand",
+        "name": "Watchful Relic",
+        "levelRequirement": {
+            "skillHrid": "/skills/crafting",
+            "level": 70
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/crafting",
+            "value": 15000
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0006944444444444445,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "",
+        "inputItems": [
+            {
+                "itemHrid": "/items/eye_of_the_watcher",
+                "count": 10
+            },
+            {
+                "itemHrid": "/items/rainbow_cheese",
+                "count": 100
+            },
+            {
+                "itemHrid": "/items/redwood_lumber",
+                "count": 100
+            },
+            {
+                "itemHrid": "/items/crimson_cheese",
+                "count": 100
+            },
+            {
+                "itemHrid": "/items/ginkgo_lumber",
+                "count": 100
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/watchful_relic",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 68
     },
     "/actions/crafting/wizard_necklace": {
         "hrid": "/actions/crafting/wizard_necklace",
@@ -16571,7 +17163,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 56
+        "sortIndex": 57
     },
     "/actions/crafting/wooden_bow": {
         "hrid": "/actions/crafting/wooden_bow",
@@ -18756,7 +19348,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 30
+        "sortIndex": 31
     },
     "/actions/tailoring/bamboo_fabric": {
         "hrid": "/actions/tailoring/bamboo_fabric",
@@ -18802,7 +19394,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 28
+        "sortIndex": 29
     },
     "/actions/tailoring/bamboo_gloves": {
         "hrid": "/actions/tailoring/bamboo_gloves",
@@ -18848,7 +19440,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 32
+        "sortIndex": 33
     },
     "/actions/tailoring/bamboo_hat": {
         "hrid": "/actions/tailoring/bamboo_hat",
@@ -18894,7 +19486,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 34
+        "sortIndex": 35
     },
     "/actions/tailoring/bamboo_robe_bottoms": {
         "hrid": "/actions/tailoring/bamboo_robe_bottoms",
@@ -18940,7 +19532,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 36
+        "sortIndex": 37
     },
     "/actions/tailoring/bamboo_robe_top": {
         "hrid": "/actions/tailoring/bamboo_robe_top",
@@ -18986,7 +19578,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 39
+        "sortIndex": 40
     },
     "/actions/tailoring/beast_boots": {
         "hrid": "/actions/tailoring/beast_boots",
@@ -19032,7 +19624,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 46
+        "sortIndex": 49
     },
     "/actions/tailoring/beast_bracers": {
         "hrid": "/actions/tailoring/beast_bracers",
@@ -19078,7 +19670,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 48
+        "sortIndex": 51
     },
     "/actions/tailoring/beast_chaps": {
         "hrid": "/actions/tailoring/beast_chaps",
@@ -19124,7 +19716,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 53
+        "sortIndex": 57
     },
     "/actions/tailoring/beast_hood": {
         "hrid": "/actions/tailoring/beast_hood",
@@ -19170,7 +19762,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 51
+        "sortIndex": 55
     },
     "/actions/tailoring/beast_leather": {
         "hrid": "/actions/tailoring/beast_leather",
@@ -19216,7 +19808,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 44
+        "sortIndex": 47
     },
     "/actions/tailoring/beast_tunic": {
         "hrid": "/actions/tailoring/beast_tunic",
@@ -19262,7 +19854,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 58
+        "sortIndex": 62
     },
     "/actions/tailoring/centaur_boots": {
         "hrid": "/actions/tailoring/centaur_boots",
@@ -19308,7 +19900,115 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 55
+        "sortIndex": 59
+    },
+    "/actions/tailoring/chrono_gloves": {
+        "hrid": "/actions/tailoring/chrono_gloves",
+        "function": "/action_functions/production",
+        "type": "/action_types/tailoring",
+        "category": "/action_categories/tailoring/hands",
+        "name": "Chrono Gloves",
+        "levelRequirement": {
+            "skillHrid": "/skills/tailoring",
+            "level": 80
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/tailoring",
+            "value": 25000
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0007638888888888889,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "/items/radiant_gloves",
+        "inputItems": [
+            {
+                "itemHrid": "/items/chrono_sphere",
+                "count": 10
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/chrono_gloves",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 75
+    },
+    "/actions/tailoring/collectors_boots": {
+        "hrid": "/actions/tailoring/collectors_boots",
+        "function": "/action_functions/production",
+        "type": "/action_types/tailoring",
+        "category": "/action_categories/tailoring/feet",
+        "name": "Collectors Boots",
+        "levelRequirement": {
+            "skillHrid": "/skills/tailoring",
+            "level": 60
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/tailoring",
+            "value": 10000
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/medium_artisans_crate",
+                "dropRate": 0.0011574074074074076,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "",
+        "inputItems": [
+            {
+                "itemHrid": "/items/gobo_rag",
+                "count": 10
+            },
+            {
+                "itemHrid": "/items/gobo_leather",
+                "count": 200
+            },
+            {
+                "itemHrid": "/items/bamboo_fabric",
+                "count": 200
+            },
+            {
+                "itemHrid": "/items/reptile_leather",
+                "count": 200
+            },
+            {
+                "itemHrid": "/items/linen_fabric",
+                "count": 200
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/collectors_boots",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 53
     },
     "/actions/tailoring/cotton_boots": {
         "hrid": "/actions/tailoring/cotton_boots",
@@ -19586,6 +20286,68 @@
         },
         "sortIndex": 13
     },
+    "/actions/tailoring/enchanted_gloves": {
+        "hrid": "/actions/tailoring/enchanted_gloves",
+        "function": "/action_functions/production",
+        "type": "/action_types/tailoring",
+        "category": "/action_categories/tailoring/hands",
+        "name": "Enchanted Gloves",
+        "levelRequirement": {
+            "skillHrid": "/skills/tailoring",
+            "level": 80
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/tailoring",
+            "value": 20000
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0007638888888888889,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "",
+        "inputItems": [
+            {
+                "itemHrid": "/items/chrono_sphere",
+                "count": 10
+            },
+            {
+                "itemHrid": "/items/umbral_leather",
+                "count": 100
+            },
+            {
+                "itemHrid": "/items/radiant_fabric",
+                "count": 100
+            },
+            {
+                "itemHrid": "/items/beast_leather",
+                "count": 100
+            },
+            {
+                "itemHrid": "/items/silk_fabric",
+                "count": 100
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/enchanted_gloves",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 73
+    },
     "/actions/tailoring/flaming_robe_bottoms": {
         "hrid": "/actions/tailoring/flaming_robe_bottoms",
         "function": "/action_functions/production",
@@ -19630,7 +20392,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 43
+        "sortIndex": 46
     },
     "/actions/tailoring/flaming_robe_top": {
         "hrid": "/actions/tailoring/flaming_robe_top",
@@ -19676,7 +20438,69 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 42
+        "sortIndex": 45
+    },
+    "/actions/tailoring/fluffy_red_hat": {
+        "hrid": "/actions/tailoring/fluffy_red_hat",
+        "function": "/action_functions/production",
+        "type": "/action_types/tailoring",
+        "category": "/action_categories/tailoring/head",
+        "name": "Fluffy Red Hat",
+        "levelRequirement": {
+            "skillHrid": "/skills/tailoring",
+            "level": 80
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/tailoring",
+            "value": 20000
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0007638888888888889,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "",
+        "inputItems": [
+            {
+                "itemHrid": "/items/red_panda_fluff",
+                "count": 10
+            },
+            {
+                "itemHrid": "/items/umbral_leather",
+                "count": 100
+            },
+            {
+                "itemHrid": "/items/radiant_fabric",
+                "count": 100
+            },
+            {
+                "itemHrid": "/items/beast_leather",
+                "count": 100
+            },
+            {
+                "itemHrid": "/items/silk_fabric",
+                "count": 100
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/fluffy_red_hat",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 74
     },
     "/actions/tailoring/giant_pouch": {
         "hrid": "/actions/tailoring/giant_pouch",
@@ -19730,7 +20554,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 57
+        "sortIndex": 61
     },
     "/actions/tailoring/gobo_boots": {
         "hrid": "/actions/tailoring/gobo_boots",
@@ -19776,7 +20600,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 29
+        "sortIndex": 30
     },
     "/actions/tailoring/gobo_bracers": {
         "hrid": "/actions/tailoring/gobo_bracers",
@@ -19822,7 +20646,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 31
+        "sortIndex": 32
     },
     "/actions/tailoring/gobo_chaps": {
         "hrid": "/actions/tailoring/gobo_chaps",
@@ -19868,7 +20692,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 35
+        "sortIndex": 36
     },
     "/actions/tailoring/gobo_hood": {
         "hrid": "/actions/tailoring/gobo_hood",
@@ -19914,7 +20738,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 33
+        "sortIndex": 34
     },
     "/actions/tailoring/gobo_leather": {
         "hrid": "/actions/tailoring/gobo_leather",
@@ -19960,7 +20784,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 27
+        "sortIndex": 28
     },
     "/actions/tailoring/gobo_tunic": {
         "hrid": "/actions/tailoring/gobo_tunic",
@@ -20006,7 +20830,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 38
+        "sortIndex": 39
     },
     "/actions/tailoring/icy_robe_bottoms": {
         "hrid": "/actions/tailoring/icy_robe_bottoms",
@@ -20052,7 +20876,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 41
+        "sortIndex": 44
     },
     "/actions/tailoring/icy_robe_top": {
         "hrid": "/actions/tailoring/icy_robe_top",
@@ -20098,7 +20922,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 40
+        "sortIndex": 43
     },
     "/actions/tailoring/large_pouch": {
         "hrid": "/actions/tailoring/large_pouch",
@@ -20152,7 +20976,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 37
+        "sortIndex": 38
     },
     "/actions/tailoring/linen_boots": {
         "hrid": "/actions/tailoring/linen_boots",
@@ -20430,6 +21254,190 @@
         },
         "sortIndex": 26
     },
+    "/actions/tailoring/luna_robe_bottoms": {
+        "hrid": "/actions/tailoring/luna_robe_bottoms",
+        "function": "/action_functions/production",
+        "type": "/action_types/tailoring",
+        "category": "/action_categories/tailoring/legs",
+        "name": "Luna Robe Bottoms",
+        "levelRequirement": {
+            "skillHrid": "/skills/tailoring",
+            "level": 70
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/tailoring",
+            "value": 12000
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0006944444444444445,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "/items/silk_robe_bottoms",
+        "inputItems": [
+            {
+                "itemHrid": "/items/luna_wing",
+                "count": 8
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/luna_robe_bottoms",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 66
+    },
+    "/actions/tailoring/luna_robe_top": {
+        "hrid": "/actions/tailoring/luna_robe_top",
+        "function": "/action_functions/production",
+        "type": "/action_types/tailoring",
+        "category": "/action_categories/tailoring/body",
+        "name": "Luna Robe Top",
+        "levelRequirement": {
+            "skillHrid": "/skills/tailoring",
+            "level": 70
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/tailoring",
+            "value": 15000
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0006944444444444445,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "/items/silk_robe_top",
+        "inputItems": [
+            {
+                "itemHrid": "/items/luna_wing",
+                "count": 10
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/luna_robe_top",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 65
+    },
+    "/actions/tailoring/marine_chaps": {
+        "hrid": "/actions/tailoring/marine_chaps",
+        "function": "/action_functions/production",
+        "type": "/action_types/tailoring",
+        "category": "/action_categories/tailoring/legs",
+        "name": "Marine Chaps",
+        "levelRequirement": {
+            "skillHrid": "/skills/tailoring",
+            "level": 50
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/tailoring",
+            "value": 4800
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/medium_artisans_crate",
+                "dropRate": 0.0010648148148148149,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "/items/gobo_chaps",
+        "inputItems": [
+            {
+                "itemHrid": "/items/marine_scale",
+                "count": 8
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/marine_chaps",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 42
+    },
+    "/actions/tailoring/marine_tunic": {
+        "hrid": "/actions/tailoring/marine_tunic",
+        "function": "/action_functions/production",
+        "type": "/action_types/tailoring",
+        "category": "/action_categories/tailoring/body",
+        "name": "Marine Tunic",
+        "levelRequirement": {
+            "skillHrid": "/skills/tailoring",
+            "level": 50
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/tailoring",
+            "value": 6000
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/medium_artisans_crate",
+                "dropRate": 0.0010648148148148149,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "/items/gobo_tunic",
+        "inputItems": [
+            {
+                "itemHrid": "/items/marine_scale",
+                "count": 10
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/marine_tunic",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 41
+    },
     "/actions/tailoring/medium_pouch": {
         "hrid": "/actions/tailoring/medium_pouch",
         "function": "/action_functions/production",
@@ -20528,7 +21536,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 63
+        "sortIndex": 70
     },
     "/actions/tailoring/radiant_fabric": {
         "hrid": "/actions/tailoring/radiant_fabric",
@@ -20574,7 +21582,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 61
+        "sortIndex": 68
     },
     "/actions/tailoring/radiant_gloves": {
         "hrid": "/actions/tailoring/radiant_gloves",
@@ -20620,7 +21628,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 65
+        "sortIndex": 72
     },
     "/actions/tailoring/radiant_hat": {
         "hrid": "/actions/tailoring/radiant_hat",
@@ -20666,7 +21674,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 67
+        "sortIndex": 77
     },
     "/actions/tailoring/radiant_robe_bottoms": {
         "hrid": "/actions/tailoring/radiant_robe_bottoms",
@@ -20712,7 +21720,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 69
+        "sortIndex": 79
     },
     "/actions/tailoring/radiant_robe_top": {
         "hrid": "/actions/tailoring/radiant_robe_top",
@@ -20758,7 +21766,69 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 71
+        "sortIndex": 81
+    },
+    "/actions/tailoring/red_chefs_hat": {
+        "hrid": "/actions/tailoring/red_chefs_hat",
+        "function": "/action_functions/production",
+        "type": "/action_types/tailoring",
+        "category": "/action_categories/tailoring/head",
+        "name": "Red Chef's Hat",
+        "levelRequirement": {
+            "skillHrid": "/skills/tailoring",
+            "level": 70
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/tailoring",
+            "value": 15000
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0006944444444444445,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "",
+        "inputItems": [
+            {
+                "itemHrid": "/items/red_panda_fluff",
+                "count": 10
+            },
+            {
+                "itemHrid": "/items/beast_leather",
+                "count": 150
+            },
+            {
+                "itemHrid": "/items/silk_fabric",
+                "count": 150
+            },
+            {
+                "itemHrid": "/items/gobo_leather",
+                "count": 150
+            },
+            {
+                "itemHrid": "/items/bamboo_fabric",
+                "count": 150
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/red_chefs_hat",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 64
     },
     "/actions/tailoring/reptile_boots": {
         "hrid": "/actions/tailoring/reptile_boots",
@@ -21036,6 +22106,98 @@
         },
         "sortIndex": 25
     },
+    "/actions/tailoring/revenant_chaps": {
+        "hrid": "/actions/tailoring/revenant_chaps",
+        "function": "/action_functions/production",
+        "type": "/action_types/tailoring",
+        "category": "/action_categories/tailoring/legs",
+        "name": "Revenant Chaps",
+        "levelRequirement": {
+            "skillHrid": "/skills/tailoring",
+            "level": 90
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/tailoring",
+            "value": 40000
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0008333333333333334,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "/items/umbral_chaps",
+        "inputItems": [
+            {
+                "itemHrid": "/items/revenant_anima",
+                "count": 8
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/revenant_chaps",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 83
+    },
+    "/actions/tailoring/revenant_tunic": {
+        "hrid": "/actions/tailoring/revenant_tunic",
+        "function": "/action_functions/production",
+        "type": "/action_types/tailoring",
+        "category": "/action_categories/tailoring/body",
+        "name": "Revenant Tunic",
+        "levelRequirement": {
+            "skillHrid": "/skills/tailoring",
+            "level": 90
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/tailoring",
+            "value": 50000
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0008333333333333334,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "/items/umbral_tunic",
+        "inputItems": [
+            {
+                "itemHrid": "/items/revenant_anima",
+                "count": 10
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/revenant_tunic",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 82
+    },
     "/actions/tailoring/rough_boots": {
         "hrid": "/actions/tailoring/rough_boots",
         "function": "/action_functions/production",
@@ -21312,6 +22474,68 @@
         },
         "sortIndex": 12
     },
+    "/actions/tailoring/shoebill_shoes": {
+        "hrid": "/actions/tailoring/shoebill_shoes",
+        "function": "/action_functions/production",
+        "type": "/action_types/tailoring",
+        "category": "/action_categories/tailoring/feet",
+        "name": "Shoebill Shoes",
+        "levelRequirement": {
+            "skillHrid": "/skills/tailoring",
+            "level": 30
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/tailoring",
+            "value": 2000
+        },
+        "dropTable": null,
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/small_artisans_crate",
+                "dropRate": 0.0018055555555555557,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "",
+        "inputItems": [
+            {
+                "itemHrid": "/items/shoebill_feather",
+                "count": 10
+            },
+            {
+                "itemHrid": "/items/reptile_leather",
+                "count": 50
+            },
+            {
+                "itemHrid": "/items/linen_fabric",
+                "count": 50
+            },
+            {
+                "itemHrid": "/items/rough_leather",
+                "count": 50
+            },
+            {
+                "itemHrid": "/items/cotton_fabric",
+                "count": 50
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/shoebill_shoes",
+                "count": 1
+            }
+        ],
+        "monsterSpawnInfo": {
+            "maxSpawnCount": 0,
+            "maxTotalStrength": 0,
+            "spawns": null,
+            "bossFightMonsters": null,
+            "battlesPerBoss": 0
+        },
+        "sortIndex": 27
+    },
     "/actions/tailoring/sighted_bracers": {
         "hrid": "/actions/tailoring/sighted_bracers",
         "function": "/action_functions/production",
@@ -21356,7 +22580,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 50
+        "sortIndex": 54
     },
     "/actions/tailoring/silk_boots": {
         "hrid": "/actions/tailoring/silk_boots",
@@ -21402,7 +22626,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 47
+        "sortIndex": 50
     },
     "/actions/tailoring/silk_fabric": {
         "hrid": "/actions/tailoring/silk_fabric",
@@ -21448,7 +22672,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 45
+        "sortIndex": 48
     },
     "/actions/tailoring/silk_gloves": {
         "hrid": "/actions/tailoring/silk_gloves",
@@ -21494,7 +22718,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 49
+        "sortIndex": 52
     },
     "/actions/tailoring/silk_hat": {
         "hrid": "/actions/tailoring/silk_hat",
@@ -21540,7 +22764,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 52
+        "sortIndex": 56
     },
     "/actions/tailoring/silk_robe_bottoms": {
         "hrid": "/actions/tailoring/silk_robe_bottoms",
@@ -21586,7 +22810,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 54
+        "sortIndex": 58
     },
     "/actions/tailoring/silk_robe_top": {
         "hrid": "/actions/tailoring/silk_robe_top",
@@ -21632,7 +22856,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 59
+        "sortIndex": 63
     },
     "/actions/tailoring/small_pouch": {
         "hrid": "/actions/tailoring/small_pouch",
@@ -21732,7 +22956,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 56
+        "sortIndex": 60
     },
     "/actions/tailoring/umbral_boots": {
         "hrid": "/actions/tailoring/umbral_boots",
@@ -21778,7 +23002,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 62
+        "sortIndex": 69
     },
     "/actions/tailoring/umbral_bracers": {
         "hrid": "/actions/tailoring/umbral_bracers",
@@ -21824,7 +23048,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 64
+        "sortIndex": 71
     },
     "/actions/tailoring/umbral_chaps": {
         "hrid": "/actions/tailoring/umbral_chaps",
@@ -21870,7 +23094,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 68
+        "sortIndex": 78
     },
     "/actions/tailoring/umbral_hood": {
         "hrid": "/actions/tailoring/umbral_hood",
@@ -21916,7 +23140,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 66
+        "sortIndex": 76
     },
     "/actions/tailoring/umbral_leather": {
         "hrid": "/actions/tailoring/umbral_leather",
@@ -21962,7 +23186,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 60
+        "sortIndex": 67
     },
     "/actions/tailoring/umbral_tunic": {
         "hrid": "/actions/tailoring/umbral_tunic",
@@ -22008,7 +23232,7 @@
             "bossFightMonsters": null,
             "battlesPerBoss": 0
         },
-        "sortIndex": 70
+        "sortIndex": 80
     },
     "/actions/woodcutting/arcane_tree": {
         "hrid": "/actions/woodcutting/arcane_tree",

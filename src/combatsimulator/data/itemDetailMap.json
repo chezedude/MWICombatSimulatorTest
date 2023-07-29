@@ -26768,19 +26768,19 @@
             },
             {
                 "itemHrid": "/items/gobo_leather",
-                "count": 8
+                "count": 4
             },
             {
                 "itemHrid": "/items/bamboo_fabric",
-                "count": 8
+                "count": 4
             },
             {
                 "itemHrid": "/items/reptile_leather",
-                "count": 8
+                "count": 4
             },
             {
                 "itemHrid": "/items/linen_fabric",
-                "count": 8
+                "count": 4
             },
             {
                 "itemHrid": "/items/coin",
@@ -38959,19 +38959,19 @@
             },
             {
                 "itemHrid": "/items/umbral_leather",
-                "count": 4
+                "count": 2
             },
             {
                 "itemHrid": "/items/radiant_fabric",
-                "count": 4
+                "count": 2
             },
             {
                 "itemHrid": "/items/beast_leather",
-                "count": 4
+                "count": 2
             },
             {
                 "itemHrid": "/items/silk_fabric",
-                "count": 4
+                "count": 2
             },
             {
                 "itemHrid": "/items/coin",
@@ -40128,19 +40128,19 @@
             },
             {
                 "itemHrid": "/items/rainbow_cheese",
-                "count": 6
+                "count": 3
             },
             {
                 "itemHrid": "/items/redwood_lumber",
-                "count": 6
+                "count": 3
             },
             {
                 "itemHrid": "/items/crimson_cheese",
-                "count": 6
+                "count": 3
             },
             {
                 "itemHrid": "/items/ginkgo_lumber",
-                "count": 6
+                "count": 3
             },
             {
                 "itemHrid": "/items/coin",
@@ -59597,8 +59597,8 @@
                 "magicEvasion": 0.24,
                 "armor": 9,
                 "waterResistance": 18,
-                "natureResistance": 9,
-                "fireResistance": 18,
+                "natureResistance": 18,
+                "fireResistance": 9,
                 "tenacity": 15,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -59674,8 +59674,8 @@
                 "magicEvasion": 0.0048,
                 "armor": 0.18,
                 "waterResistance": 0.36,
-                "natureResistance": 0.18,
-                "fireResistance": 0.36,
+                "natureResistance": 0.36,
+                "fireResistance": 0.18,
                 "tenacity": 0.3,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -59802,8 +59802,8 @@
                 "magicEvasion": 0.28,
                 "armor": 12,
                 "waterResistance": 24,
-                "natureResistance": 12,
-                "fireResistance": 24,
+                "natureResistance": 24,
+                "fireResistance": 12,
                 "tenacity": 20,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -59879,8 +59879,8 @@
                 "magicEvasion": 0.005600000000000001,
                 "armor": 0.24,
                 "waterResistance": 0.48,
-                "natureResistance": 0.24,
-                "fireResistance": 0.48,
+                "natureResistance": 0.48,
+                "fireResistance": 0.24,
                 "tenacity": 0.4,
                 "lifeSteal": 0,
                 "manaLeech": 0,
@@ -61095,10 +61095,10 @@
         "name": "Marine Chaps",
         "description": "",
         "categoryHrid": "/item_categories/equipment",
-        "sellPrice": 32000,
+        "sellPrice": 48000,
         "isTradable": true,
         "isOpenable": false,
-        "itemLevel": 40,
+        "itemLevel": 50,
         "enhancementCosts": [
             {
                 "itemHrid": "/items/aqua_essence",
@@ -61110,7 +61110,7 @@
             },
             {
                 "itemHrid": "/items/coin",
-                "count": 180
+                "count": 245
             }
         ],
         "protectionItemHrids": [
@@ -61120,8 +61120,8 @@
             "type": "/equipment_types/legs",
             "levelRequirements": [
                 {
-                    "skillHrid": "/skills/defense",
-                    "level": 40
+                    "skillHrid": "/skills/ranged",
+                    "level": 50
                 }
             ],
             "combatStats": {
@@ -61485,10 +61485,10 @@
         "name": "Marine Tunic",
         "description": "",
         "categoryHrid": "/item_categories/equipment",
-        "sellPrice": 40000,
+        "sellPrice": 60000,
         "isTradable": true,
         "isOpenable": false,
-        "itemLevel": 40,
+        "itemLevel": 50,
         "enhancementCosts": [
             {
                 "itemHrid": "/items/aqua_essence",
@@ -61500,7 +61500,7 @@
             },
             {
                 "itemHrid": "/items/coin",
-                "count": 180
+                "count": 245
             }
         ],
         "protectionItemHrids": [
@@ -61510,8 +61510,8 @@
             "type": "/equipment_types/body",
             "levelRequirements": [
                 {
-                    "skillHrid": "/skills/defense",
-                    "level": 40
+                    "skillHrid": "/skills/ranged",
+                    "level": 50
                 }
             ],
             "combatStats": {
@@ -77479,19 +77479,19 @@
             },
             {
                 "itemHrid": "/items/beast_leather",
-                "count": 6
+                "count": 3
             },
             {
                 "itemHrid": "/items/silk_fabric",
-                "count": 6
+                "count": 3
             },
             {
                 "itemHrid": "/items/gobo_leather",
-                "count": 6
+                "count": 3
             },
             {
                 "itemHrid": "/items/bamboo_fabric",
-                "count": 6
+                "count": 3
             },
             {
                 "itemHrid": "/items/coin",
@@ -106044,7 +106044,7 @@
                 "smashEvasion": 0,
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
-                "armor": 0,
+                "armor": 10,
                 "waterResistance": 0,
                 "natureResistance": 0,
                 "fireResistance": 0,
@@ -106121,7 +106121,7 @@
                 "smashEvasion": 0,
                 "rangedEvasion": 0,
                 "magicEvasion": 0,
-                "armor": 0,
+                "armor": 0.2,
                 "waterResistance": 0,
                 "natureResistance": 0,
                 "fireResistance": 0,

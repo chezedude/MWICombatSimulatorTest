@@ -4507,6 +4507,12 @@
                 "maxCount": 2
             },
             {
+                "itemHrid": "/items/infernal_ember",
+                "dropRate": 0.007,
+                "minCount": 1,
+                "maxCount": 1
+            },
+            {
                 "itemHrid": "/items/abyssal_essence",
                 "dropRate": 0.3,
                 "minCount": 3,
@@ -7162,6 +7168,12 @@
                 "maxCount": 2
             },
             {
+                "itemHrid": "/items/soul_fragment",
+                "dropRate": 0.007,
+                "minCount": 1,
+                "maxCount": 1
+            },
+            {
                 "itemHrid": "/items/abyssal_essence",
                 "dropRate": 0.3,
                 "minCount": 2,
@@ -7846,6 +7858,12 @@
             {
                 "itemHrid": "/items/amber",
                 "dropRate": 0.0004,
+                "minCount": 1,
+                "maxCount": 1
+            },
+            {
+                "itemHrid": "/items/treant_bark",
+                "dropRate": 0.003,
                 "minCount": 1,
                 "maxCount": 1
             },
