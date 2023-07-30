@@ -3,6 +3,28 @@
     <head>
         <style>
             .form-control {min-width: 3.60rem}
+            body.dark-mode {
+                background-color: #333;
+                color: #f0f0f0;
+            }
+
+            body.dark-mode header {
+                background-color: #666;
+            }
+
+            body.dark-mode input[type="number"],
+            body.dark-mode .form-select,
+            body.dark-mode .input-group-text,
+            body.dark-mode .accordion-button,
+            body.dark-mode .accordion-collapse,
+            body.dark-mode .modal-content,
+            body.dark-mode textarea {
+                background-color: #444;
+                color: #f0f0f0;
+                border: 1px solid #999;
+                /* Add other relevant styles for form controls in dark mode */
+            }
+
         </style>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -711,6 +733,13 @@
                                     >
                                         Import/Export
                                     </button>
+                                </div>
+                                <div class="col align-self-center">
+                                    Dark Mode:
+                                    <label class="switch">
+                                        <input type="checkbox" id="darkModeToggle">
+                                        <span class="slider round"></span>
+                                    </label>
                                 </div>
                             </div>
                             <!-- #endregion -->

@@ -2917,6 +2917,22 @@ function updateUI() {
     updateAbilityUI();
 }
 
+const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+
+// Check if dark mode is enabled in local storage
+if (localStorage.getItem('darkModeEnabled') === 'true') {
+    body.classList.add('dark-mode');
+    darkModeToggle.checked = true;
+}
+
+// Toggle dark mode when the user clicks the toggle button
+darkModeToggle.addEventListener('change', () => {
+    body.classList.toggle('dark-mode');
+    localStorage.setItem('darkModeEnabled', darkModeToggle.checked);
+});
+
+
 initEquipmentSection();
 initLevelSection();
 initFoodSection();

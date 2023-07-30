@@ -1667,6 +1667,20 @@ function updateUI() {
     updateAbilityUI();
 }
 
+const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+
+if (localStorage.getItem('darkModeEnabled') === 'true') {
+    body.classList.add('dark-mode');
+    darkModeToggle.checked = true;
+}
+
+darkModeToggle.addEventListener('change', () => {
+    body.classList.toggle('dark-mode');
+    localStorage.setItem('darkModeEnabled', darkModeToggle.checked);
+});
+
+
 initEquipmentSection();
 initLevelSection();
 initFoodSection();
