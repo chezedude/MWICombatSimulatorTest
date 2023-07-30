@@ -129,7 +129,7 @@ class CombatUtilities {
             (Math.pow(sourceAccuracyRating, 1.4) + Math.pow(targetEvasionRating, 1.4));
 
         if (combatStyle == "/combat_styles/ranged") {
-                critChance = 0.3 * hitChance;
+            critChance = 0.3 * hitChance;
         }
 
         critChance = critChance + bonusCritChance;
@@ -147,7 +147,7 @@ class CombatUtilities {
 
         let damageRoll = CombatUtilities.randomInt(sourceMinDamage, sourceMaxDamage);
         damageRoll = damageRoll * (1 + source.combatDetails.combatStats.taskDamage);
-        let maxPremitigatedDamage = Math.min(damageRoll, target.combatDetails.currentHitpoints);
+        var premitigatedDamage = damageRoll;
 
         let damageDone = 0;
         let mitigatedReflectDamage = 0;
@@ -203,28 +203,33 @@ class CombatUtilities {
             },
         };
 
-        switch (combatStyle) {
-            case "/combat_styles/stab":
-                experienceGained.source.attack = this.calculateAttackExperience(damageDone, combatStyle);
-                experienceGained.source.power = this.calculatePowerExperience(damageDone, combatStyle);
-                break;
-            case "/combat_styles/slash":
-                experienceGained.source.attack = this.calculateAttackExperience(damageDone, combatStyle);
-                experienceGained.source.power = this.calculatePowerExperience(damageDone, combatStyle);
-                break;
-            case "/combat_styles/smash":
-                experienceGained.source.attack = this.calculateAttackExperience(damageDone, combatStyle);
-                experienceGained.source.power = this.calculatePowerExperience(damageDone, combatStyle);
-                break;
-            case "/combat_styles/ranged":
-                experienceGained.source.ranged = this.calculateRangedExperience(damageDone);
-                break;
-            case "/combat_styles/magic":
-                experienceGained.source.magic = this.calculateMagicExperience(damageDone);
-                break;
+        var damagePrevented = premitigatedDamage - damageDone;
+        if (target.combatDetails.combatStats.currentHitpoints == 0) {
+            damagePrevented = 0;
+        } else if (damagePrevented < 0) {
+            damagePrevented = 0;
         }
 
-        let damagePrevented = maxPremitigatedDamage - damageDone;
+        switch (combatStyle) {
+            case "/combat_styles/stab":
+                experienceGained.source.attack = this.calculateAttackExperience(damageDone, damagePrevented, combatStyle);
+                experienceGained.source.power = this.calculatePowerExperience(damageDone, damagePrevented, combatStyle);
+                break;
+            case "/combat_styles/slash":
+                experienceGained.source.attack = this.calculateAttackExperience(damageDone, damagePrevented, combatStyle);
+                experienceGained.source.power = this.calculatePowerExperience(damageDone, damagePrevented, combatStyle);
+                break;
+            case "/combat_styles/smash":
+                experienceGained.source.attack = this.calculateAttackExperience(damageDone, damagePrevented, combatStyle);
+                experienceGained.source.power = this.calculatePowerExperience(damageDone, damagePrevented, combatStyle);
+                break;
+            case "/combat_styles/ranged":
+                experienceGained.source.ranged = this.calculateRangedExperience(damageDone, damagePrevented);
+                break;
+            case "/combat_styles/magic":
+                experienceGained.source.magic = this.calculateMagicExperience(damageDone, damagePrevented);
+                break;
+        }
 
         experienceGained.target.defense = this.calculateDefenseExperience(damagePrevented);
         experienceGained.target.stamina = this.calculateStaminaExperience(damagePrevented, damageDone);
@@ -271,27 +276,29 @@ class CombatUtilities {
         return 0.3 * manaUsed;
     }
 
-    static calculateAttackExperience(damage, combatStyle) {
+    static calculateAttackExperience(damage, mitigated, combatStyle) {
+        let baseExpForDamage = 0.6 + 0.125 * damage + 0.3 * mitigated;
         switch (combatStyle) {
             case "/combat_styles/stab":
-                return (0.6 + 0.15 * damage) * 0.9;
+                return baseExpForDamage * 0.9;
             case "/combat_styles/slash":
-                return 0.3 + 0.075 * damage;
+                return baseExpForDamage * 0.5;
             case "/combat_styles/smash":
-                return (0.6 + 0.15 * damage) * 0.1;
+                return baseExpForDamage * 0.1;
             default:
                 return 0;
         }
     }
 
-    static calculatePowerExperience(damage, combatStyle) {
+    static calculatePowerExperience(damage, mitigated, combatStyle) {
+        let baseExpForDamage = 0.6 + 0.125 * damage + 0.3 * mitigated;
         switch (combatStyle) {
             case "/combat_styles/smash":
-                return (0.6 + 0.15 * damage) * 0.9;
+                return baseExpForDamage * 0.9;
             case "/combat_styles/slash":
-                return 0.3 + 0.075 * damage;
+                return baseExpForDamage * 0.5;
             case "/combat_styles/stab":
-                return (0.6 + 0.15 * damage) * 0.1;
+                return baseExpForDamage * 0.1;
             default:
                 return 0;
         }
@@ -301,12 +308,14 @@ class CombatUtilities {
         return 0.4 + 0.1 * damagePrevented;
     }
 
-    static calculateRangedExperience(damage) {
-        return 0.4 + 0.1 * damage;
+    static calculateRangedExperience(damage, mitigated) {
+        let baseExpForDamage = 0.6 + 0.125 * damage + 0.3 * mitigated;
+        return baseExpForDamage * 0.667;
     }
 
-    static calculateMagicExperience(damage) {
-        return 0.4 + 0.1 * damage;
+    static calculateMagicExperience(damage, mitigated) {
+        let baseExpForDamage = 0.6 + 0.125 * damage + 0.3 * mitigated;
+        return baseExpForDamage * 0.667;
     }
 }
 
